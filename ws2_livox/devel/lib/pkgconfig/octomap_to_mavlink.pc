@@ -1,0 +1,8 @@
+prefix=/home/uhdt/ws2_livox/devel
+
+Name: octomap_to_mavlink
+Description: Description of octomap_to_mavlink
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
