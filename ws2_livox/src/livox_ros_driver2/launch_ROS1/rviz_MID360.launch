@@ -1,0 +1,72 @@
+<launch>
+
+	<!--user configure parameters for ros start-->
+	<arg name="lvx_file_path" default="livox_test.lvx"/>
+	<arg name="bd_list" default="47MDLC90020024"/>
+	<arg name="xfer_format" default="0"/>
+	<arg name="multi_topic" default="0"/>
+	<arg name="data_src" default="0"/>
+	<arg name="publish_freq" default="10.0"/>
+	<arg name="output_type" default="0"/>
+	<arg name="rviz_enable" default="true"/>
+	<arg name="rosbag_enable" default="false"/>
+	<arg name="cmdline_arg" default="$(arg bd_list)"/>
+	<arg name="msg_frame_id" default="livox_frame"/>
+	<arg name="lidar_bag" default="true"/>
+	<arg name="imu_bag" default="true"/>
+	<!--user configure parameters for ros end--> 
+
+	<param name="xfer_format" value="$(arg xfer_format)"/>
+	<param name="multi_topic" value="$(arg multi_topic)"/>
+	<param name="data_src" value="$(arg data_src)"/>
+	<param name="publish_freq" type="double" value="$(arg publish_freq)"/>
+	<param name="output_data_type" value="$(arg output_type)"/>
+	<param name="cmdline_str" type="string" value="$(arg bd_list)"/>
+	<param name="cmdline_file_path" type="string" value="$(arg lvx_file_path)"/>
+	<param name="user_config_path" type="string" value="$(find livox_ros_driver2)/config/MID360_config.json"/>
+	<param name="frame_id" type="string" value="$(arg msg_frame_id)"/>
+	<param name="enable_lidar_bag" type="bool" value="$(arg lidar_bag)"/>
+	<param name="enable_imu_bag" type="bool" value="$(arg imu_bag)"/>
+	
+	<node pkg="tf" type="static_transform_publisher" name="livox_static_tf"
+	      args="0 0 0 0 0 0 map livox_frame 100"/>
+
+	<node name="livox_lidar_publisher2" pkg="livox_ros_driver2"
+	      type="livox_ros_driver2_node" required="true"
+	      output="screen" args="$(arg cmdline_arg)"/>
+
+	<group if="$(arg rviz_enable)">
+		<node name="livox_rviz" pkg="rviz" type="rviz" respawn="true"
+				args="-d $(find livox_ros_driver2)/config/display_point_cloud_ROS1.rviz"/>
+    </group>
+
+	<group if="$(arg rosbag_enable)">
+    	<node pkg="rosbag" type="record" name="record" output="screen"
+          		args="-a"/>
+    </group>
+    
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+  	 <param name="min_height" value="0.1"/>
+  	 <param name="max_height" value="0.9"/>
+  	 <param name="range_min" value="0.5"/>
+  	 <param name="range_max" value="40.0"/>
+  	 <param name="scan_time" value="0.1"/>
+  	 <param name="use_inf" value="true"/>
+  	 <remap from="cloud_in" to="/livox/lidar"/>
+  	 <remap from="scan" to="/scan"/>
+	</node>
+	
+	<node pkg="nodelet" type="nodelet" name="voxel_grid" output="screen" args="standalone pcl/VoxelGrid">
+		<param name="leaf_size" value="0.1"/>
+		<remap from="~input" to="/livox/lidar"/>
+		<remap from="output" to="/voxels/output"/>	
+	</node>
+	
+	<!--
+	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server" output="screen">
+		<param name="resolution" value="0.00001"/>
+		<remap from="cloud_in" to="/livox/lidar"/>
+	</node>
+	
+	-->
+</launch>
