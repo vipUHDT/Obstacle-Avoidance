@@ -1,0 +1,6 @@
+devel_space: /home/uhdt/ws_autonomous/devel
+install: false
+install_space: /home/uhdt/ws_autonomous/install
+profile: default
+source_space: /home/uhdt/ws_autonomous/src
+workspace: /home/uhdt/ws_autonomous

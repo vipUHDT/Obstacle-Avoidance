@@ -1,0 +1,21 @@
+mavros/mavros
+/home/uhdt/ws_autonomous/devel/.private/mavros/cmake.lock /home/uhdt/ws_autonomous/devel/./cmake.lock
+/home/uhdt/ws_autonomous/devel/.private/mavros/share/mavros/cmake/mavrosConfig-version.cmake /home/uhdt/ws_autonomous/devel/share/mavros/cmake/mavrosConfig-version.cmake
+/home/uhdt/ws_autonomous/devel/.private/mavros/share/mavros/cmake/mavrosConfig.cmake /home/uhdt/ws_autonomous/devel/share/mavros/cmake/mavrosConfig.cmake
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/libmavros.so /home/uhdt/ws_autonomous/devel/lib/libmavros.so
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/libmavros_plugins.so /home/uhdt/ws_autonomous/devel/lib/libmavros_plugins.so
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/mavsys /home/uhdt/ws_autonomous/devel/lib/mavros/mavsys
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/checkid /home/uhdt/ws_autonomous/devel/lib/mavros/checkid
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/mavsafety /home/uhdt/ws_autonomous/devel/lib/mavros/mavsafety
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/event_launcher /home/uhdt/ws_autonomous/devel/lib/mavros/event_launcher
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/mavcmd /home/uhdt/ws_autonomous/devel/lib/mavros/mavcmd
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/mavwp /home/uhdt/ws_autonomous/devel/lib/mavros/mavwp
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/mavros_node /home/uhdt/ws_autonomous/devel/lib/mavros/mavros_node
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/gcs_bridge /home/uhdt/ws_autonomous/devel/lib/mavros/gcs_bridge
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/mavparam /home/uhdt/ws_autonomous/devel/lib/mavros/mavparam
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/mavftp /home/uhdt/ws_autonomous/devel/lib/mavros/mavftp
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/cmake.lock /home/uhdt/ws_autonomous/devel/lib/mavros/cmake.lock
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/install_geographiclib_datasets.sh /home/uhdt/ws_autonomous/devel/lib/mavros/install_geographiclib_datasets.sh
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/mavsetp /home/uhdt/ws_autonomous/devel/lib/mavros/mavsetp
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/pkgconfig/mavros.pc /home/uhdt/ws_autonomous/devel/lib/pkgconfig/mavros.pc
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/python3/dist-packages/mavros/__init__.py /home/uhdt/ws_autonomous/devel/lib/python3/dist-packages/mavros/__init__.py

@@ -1,0 +1,8 @@
+mavros/mavros_extras
+/home/uhdt/ws_autonomous/devel/.private/mavros_extras/cmake.lock /home/uhdt/ws_autonomous/devel/./cmake.lock
+/home/uhdt/ws_autonomous/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig.cmake /home/uhdt/ws_autonomous/devel/share/mavros_extras/cmake/mavros_extrasConfig.cmake
+/home/uhdt/ws_autonomous/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake /home/uhdt/ws_autonomous/devel/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake
+/home/uhdt/ws_autonomous/devel/.private/mavros_extras/lib/libmavros_extras.so /home/uhdt/ws_autonomous/devel/lib/libmavros_extras.so
+/home/uhdt/ws_autonomous/devel/.private/mavros_extras/lib/pkgconfig/mavros_extras.pc /home/uhdt/ws_autonomous/devel/lib/pkgconfig/mavros_extras.pc
+/home/uhdt/ws_autonomous/devel/.private/mavros_extras/lib/mavros_extras/visualization /home/uhdt/ws_autonomous/devel/lib/mavros_extras/visualization
+/home/uhdt/ws_autonomous/devel/.private/mavros_extras/lib/mavros_extras/servo_state_publisher /home/uhdt/ws_autonomous/devel/lib/mavros_extras/servo_state_publisher

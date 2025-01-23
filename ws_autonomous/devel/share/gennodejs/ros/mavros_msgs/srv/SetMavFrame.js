@@ -1,0 +1,1 @@
+/home/uhdt/ws_autonomous/devel/.private/mavros_msgs/share/gennodejs/ros/mavros_msgs/srv/SetMavFrame.js

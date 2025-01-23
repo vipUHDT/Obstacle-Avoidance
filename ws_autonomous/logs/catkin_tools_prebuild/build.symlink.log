@@ -1,0 +1,12 @@
+Symlinking /home/uhdt/ws_autonomous/devel/./setup.zsh
+Symlinking /home/uhdt/ws_autonomous/devel/./local_setup.zsh
+Symlinking /home/uhdt/ws_autonomous/devel/./setup.bash
+Symlinking /home/uhdt/ws_autonomous/devel/./env.sh
+Symlinking /home/uhdt/ws_autonomous/devel/./setup.sh
+Symlinking /home/uhdt/ws_autonomous/devel/./_setup_util.py
+Symlinking /home/uhdt/ws_autonomous/devel/./cmake.lock
+Symlinking /home/uhdt/ws_autonomous/devel/./local_setup.bash
+Symlinking /home/uhdt/ws_autonomous/devel/./local_setup.sh
+Symlinking /home/uhdt/ws_autonomous/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /home/uhdt/ws_autonomous/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/uhdt/ws_autonomous/devel/lib/pkgconfig/catkin_tools_prebuild.pc

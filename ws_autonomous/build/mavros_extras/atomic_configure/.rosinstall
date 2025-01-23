@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/uhdt/ws_autonomous/devel/.private/mavros_extras/setup.sh

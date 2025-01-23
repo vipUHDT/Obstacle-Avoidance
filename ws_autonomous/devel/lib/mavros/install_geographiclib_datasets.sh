@@ -1,0 +1,1 @@
+/home/uhdt/ws_autonomous/devel/.private/mavros/lib/mavros/install_geographiclib_datasets.sh
