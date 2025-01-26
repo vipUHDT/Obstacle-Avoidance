@@ -11,6 +11,8 @@ from mavros.utils import *
 from mavros_msgs.msg import State, ParamValue, GlobalPositionTarget
 from mavros_msgs.srv import ParamSet
 from geographic_msgs.msg import GeoPoseStamped
+from sensor_msgs.msg import NavSatFix
+from haversine import haversine, Unit
 
 
 class SetpointGlobalPosition:
@@ -30,12 +32,12 @@ class SetpointGlobalPosition:
 
 
         self.pub = rospy.Publisher(
-            '/mavros/setpoint_raw/global',
-            GlobalPositionTarget,
+            '/mavros/setpoint_position/global',
+            GeoPoseStamped,
             queue_size=10
         )
         
-        rospy.Subscriber('/mavros/global_position/global', GlobalPositionTarget, self.position_callback)
+        rospy.Subscriber('/mavros/global_position/global', NavSatFix, self.position_callback)
         rospy.Subscriber('/mavros/state', State, self.state_callback)
 
         threading.Thread(target=self.navigate).start()
@@ -52,6 +54,7 @@ class SetpointGlobalPosition:
         self.current_lat = msg.latitude
         self.current_lon = msg.longitude
         self.current_alt = msg.altitude
+        #rospy.loginfo(f"Position Updated: {self.current_lat}, {self.current_lon}, {self.current_alt}")
 
     def is_armed(self):
 
@@ -74,8 +77,9 @@ class SetpointGlobalPosition:
 
     def navigate(self):
         rate = rospy.Rate(10)   # 10hz
-        msg = GlobalPositionTarget()
+        msg = GeoPoseStamped() #Change this back
 
+        '''
         msg.coordinate_frame = GlobalPositionTarget.FRAME_GLOBAL_REL_ALT
         msg.type_mask = (
             GlobalPositionTarget.IGNORE_VX |
@@ -87,11 +91,11 @@ class SetpointGlobalPosition:
             GlobalPositionTarget.IGNORE_YAW |
             GlobalPositionTarget.IGNORE_YAW_RATE
         )
-
+        '''
         while not rospy.is_shutdown():
-            msg.latitude = self.latitude
-            msg.longitude = self.longitude
-            msg.altitude = self.altitude
+            msg.pose.position.latitude = self.latitude
+            msg.pose.position.longitude = self.longitude
+            msg.pose.position.altitude = self.altitude
 
             self.pub.publish(msg)
             rate.sleep()
@@ -104,17 +108,23 @@ class SetpointGlobalPosition:
 
         time.sleep(delay)
 
-    def reached(self, curent_lat, current_lon, current_alt):
+
+
+    def reached(self, current_lat, current_lon, current_alt):
         def is_near(value, target, threshold):
             return abs(value - target) < threshold
-
-        if is_near(curent_lat, self.latitude, 5) and \
-           is_near(current_lon, self.longitude,5) and \
-           is_near(current_alt, self.altitude,5):
+        '''
+        if is_near(curent_lat, self.latitude, 25) and \
+           is_near(current_lon, self.longitude,25) and \
+           is_near(current_alt, self.altitude,25):
             self.done = True
             self.done_evt.set()
             return True
-
+        '''
+        distance = haversine((self.current_lat, self.current_lon), (self.latitude, self.longitude), unit=Unit.METERS)
+        if distance < 3 :
+            return True
+            
 def set_param(param_name, param_value):
         rospy.wait_for_service('/mavros/param/set')
         set_param_service = rospy.ServiceProxy('/mavros/param/set', ParamSet)
@@ -141,13 +151,9 @@ def setpoint_demo():
     setpoint.is_armed()
     setpoint.is_guided()
 
-    #rospy.loginfo("Climb")
-    #setpoint.set(0.0, 0.0, 3.0, 0)
-    #setpoint.set(0.0, 0.0, 10.0, 5)
-
     waypoints = [
-        (21.4004242, -157.7647783, 25),
-        (21.4006577, -157.7642378, 25)
+        (21.4004242, -157.7647783, 10),
+        (21.4006577, -157.7642378, 10)
     ]
 
     for waypoint in waypoints:
