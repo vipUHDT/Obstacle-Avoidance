@@ -8,8 +8,8 @@ import mavros
 
 from math import *
 from mavros.utils import *
-from mavros_msgs.msg import State, ParamValue, Waypoint, WaypointList
-from mavros_msgs.srv import ParamSet, WaypointPush, CommandBool, CommandLong
+from mavros_msgs.msg import State, ParamValue, Waypoint, WaypointList, WaypointReached
+from mavros_msgs.srv import ParamSet, WaypointPush, CommandLong, WaypointPushRequest, WaypointClear
 from geographic_msgs.msg import GeoPoseStamped
 from sensor_msgs.msg import NavSatFix
 from haversine import haversine, Unit
@@ -19,6 +19,8 @@ class WaypointMission:
     """
     This class sends position targets to FCU's position controller
     """
+    
+    
     def __init__(self):
         rospy.init_node('auto_test2')
         mavros.set_namespace()
@@ -29,6 +31,7 @@ class WaypointMission:
 
         self.waypoint_push_srv = rospy.ServiceProxy('/mavros/mission/push', WaypointPush)
         self.command_long_srv = rospy.ServiceProxy('/mavros/cmd/command', CommandLong)
+        self.clear_wp_srv = rospy.ServiceProxy('/mavros/mission/clear', WaypointClear)
 
 
         # Set services
@@ -36,13 +39,100 @@ class WaypointMission:
 
         rospy.wait_for_service('/mavros/mission/push')
         rospy.wait_for_service('/mavros/cmd/command')
-
+        rospy.wait_for_service('/mavros/mission/clear')
         rospy.loginfo("Services Ready!")
+
+        self.waypoints = [
+            (21.4001171, -157.7644725, 10),
+            (21.4004055, -157.7642325, 15),
+            (21.4003618, -157.7642030, 10),
+            (21.4001770, -157.7646589, 12)
+        ]
+        self.latitude = [
+            21.4001171,
+            21.4004055,
+            21.4003618,
+            21.4001770
+        ]
+        self.longitude = [
+            -157.7644725,
+            -157.7642325,
+            -157.7642030,
+            -157.7646589,
+
+        ]
+        self.altitude = [
+            10,
+            10,
+            10,
+            10
+        ]
+
+        
+
+        rospy.Subscriber('/mavros/mission/reached', WaypointReached, self.reached_callback)
+
         
         
     def state_callback(self, msg):
         self.current_state = msg
         
+    def reached_callback(self, msg):
+        
+        i += 1
+        rospy.loginfo("Waypoint Reached")
+
+        #self.send_waypoint(self.latitude[i], self.longitude[i], self.altitude[i])
+        new_waypoint = self.create_waypoint(self.latitude[i], self.longitude[i], self.altitude[i])
+
+        self.upload_mission([new_waypoint])
+
+
+
+        '''
+        rospy.loginfo(f"Waypoint {msg.wp_seq} reached")
+        self.waypoint_index += 1
+        if self.waypoint_index < len(self.waypoints):
+            self.upload_next_waypoint()
+        else:
+            rospy.loginfo("All waypoints reached.")
+        '''
+
+    def change_speed(self, spd, speed_type=1):
+        command_service = rospy.ServiceProxy('/mavros/cmd/command', CommandLong)
+        response = command_service(
+            broadcast = False,
+            command=178,
+            confirmation = 0,
+            param1 =speed_type,
+            param2= float(spd),
+            param3 = -1,
+            param4 = 0,
+            param5 = 0,
+            param6 = 0,
+            param7 = 0
+        )
+        if response.success:
+            rospy.loginfo(f"Successfully changed speed to {spd} m/s")
+
+    def set_guided(self):
+        command_service = rospy.ServiceProxy('/mavros/cmd/command', CommandLong)
+        response = command_service(
+            broadcast = False,
+            command=176,
+            confirmation = 0,
+            param1 =1,
+            param2= 4,
+            param3 = -1,
+            param4 = 0,
+            param5 = 0,
+            param6 = 0,
+            param7 = 0
+        )
+        if response.success:
+            rospy.loginfo(f"Successfully changed to GUIDED")
+
+
 
     def is_armed(self):
 
@@ -55,15 +145,17 @@ class WaypointMission:
             rospy.sleep(1)
 
     def is_guided(self):
+ 
         rospy.loginfo("Waiting to be GUIDED")
         while not rospy.is_shutdown():
             if (self.current_state and self.current_state.guided):
                 rospy.loginfo("GUIDED")
+                self.set_guided()
                 break
 
             rospy.sleep(1)
 
-
+    
     def create_waypoint(self, lat, lon, alt, command=16, loiter=0, frame=3, autocontinue=True):
         '''
         command=16 - MAV_CMD_NAV_WAYPOINT
@@ -73,7 +165,7 @@ class WaypointMission:
         wp = Waypoint()
         wp.frame = frame
         wp.command = command
-        wp.is_current = False
+        wp.is_current = True
         wp.autocontinue = autocontinue
 
         wp.param1 = loiter
@@ -87,21 +179,49 @@ class WaypointMission:
 
         return wp
             
-    def upload_mission(self, waypoints):
+    
+    def upload_waypoints(self, waypoints):
         
-        if waypoints:
-            waypoints[0].is_current = True
-        
-        
-        rospy.loginfo("Uploading mission..")
+        # Clear the waypoints
+        self.clear_wp_srv()
+        rospy.sleep(1)
 
-        resp = self.waypoint_push_srv(start_index=0, waypoints=waypoints)
-        if resp.success:
-            rospy.loginfo(f"Mission uploaded successfully, {resp.wp_transfered} waypoints sent.")
+        response = self.waypoint_push_srv(start_index=0, waypoints=waypoints)
+        
+        rospy.loginfo("Uploading mission...")
+
+        if response.success:
+            rospy.loginfo(f"Mission uploaded successfully waypoint sent.")
         else:
             rospy.logerr(f"Failed to upload.")
 
 
+    '''
+    def send_waypoint(self, lat, lon, alt):
+        wp_push = rospy.ServiceProxy('/mavros/mission/push', WaypointPush)
+
+        wp = Waypoint()
+        wp.frame = 3
+        wp.command = 16
+        wp.is_current = True
+        wp.autocontinue = True
+
+        wp.param1 = 0
+        wp.param2 = 0
+        wp.param3 = 0
+        wp.param4 = 0
+
+        wp.x_lat = lat
+        wp.y_long = lon
+        wp.z_alt = alt
+
+        req = WaypointPushRequest()
+        req.waypoints.append(wp)
+        response = wp_push(req)
+
+        if response.success:
+            rospy.loginfo("Waypoint Successfully sent")
+    '''
     def set_param(self, param_name, param_value):
         rospy.wait_for_service('/mavros/param/set')
         set_param_service = rospy.ServiceProxy('/mavros/param/set', ParamSet)
@@ -116,7 +236,8 @@ class WaypointMission:
         else:
             rospy.loginfo(f"Failed to set parameter {param_name}")
 
-    def run_mission(self):
+
+    '''def run_mission(self):
 
         waypoint_list = [
             self.create_waypoint(21.4001171, -157.7644725, 10),
@@ -128,9 +249,8 @@ class WaypointMission:
         self.upload_mission(waypoints=waypoint_list)
 
         rospy.loginfo("Starting Mission")
-
-    def start_mission(self):
-
+'''
+    def begin(self):
         mission_start_command = self.command_long_srv(
             broadcast=False,
             command=300,
@@ -145,6 +265,25 @@ class WaypointMission:
         else:
             rospy.logerr("Mission Failed to start")
 
+    def start_mission(self):
+        
+        self.is_armed()
+        self.is_guided()
+
+        rospy.loginfo("Starting mission...")
+
+        #self.send_waypoint(21.4001171, -157.7644725, 10)
+        #self.change_speed(20)
+
+        new_waypoint = self.create_waypoint(self.latitude[0], self.longitude[0], self.altitude[0])
+
+        self.upload_waypoints([new_waypoint])
+
+        #rospy.sleep(1)
+        self.set_guided()
+        #rospy.sleep(5)
+        self.begin()
+        rospy.spin()
 
 
 if __name__ == '__main__':
@@ -152,8 +291,8 @@ if __name__ == '__main__':
         mission = WaypointMission()
         mission.set_param('WPNAV_SPEED', 2000)
         mission.set_param('WP_YAW_BEHAVIOR', 1)
-
-        wpList = [
+        '''
+                wpList = [
             (21.4001171, -157.7644725, 10),
             (21.4004055, -157.7642325, 15),
             (21.4003618, -157.7642030, 10),
@@ -165,14 +304,16 @@ if __name__ == '__main__':
 
             mission.create_waypoint()
             mission.upload_mission(waypoint)
+        
 
             mission.start_mission()
 
             rospy.sleep(20)
-
+        '''
 
 
         #mission.run_mission()
         mission.start_mission()
     except rospy.ROSInterruptException:
         pass
+
