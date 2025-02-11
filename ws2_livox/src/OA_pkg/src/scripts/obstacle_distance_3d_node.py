@@ -12,6 +12,7 @@ from pymavlink import mavutil
 from haversine import haversine, Unit
 
 class ObstacleDistance3D:
+
 	def __init__(self):
 		
 		#PARAMTERS
@@ -58,7 +59,7 @@ class ObstacleDistance3D:
 		# vertical speed to avoid
 
 
-		self.UAS_dk._parameters['OA_TYPE'] = 1 
+		#self.UAS_dk._parameters['OA_TYPE'] = 1 
 		# 1: Bendy Ruler 3: Dijkstra's
 
 		self.UAS_dk._parameters['OA_BR_TYPE'] = 1
@@ -123,12 +124,12 @@ class ObstacleDistance3D:
 		self.filename = f"image"
 
 		self.waypoint_lap_latitude = [
-			21.4002806,
-			21.4006677
+			21.4001570,
+			21.4004305
 		]
 		self.waypoint_lap_longitude = [
-			-157.7646509,
-			-157.7636719
+			-157.7645583,
+			-157.7639428
 		]
 
 		self.waypoint_lap_alt = [
@@ -202,6 +203,25 @@ class ObstacleDistance3D:
 		
 		return distance
 
+	def velocity_loop(self):
+		while not rospy.is_shutdown():
+			msg = self.UAS_dk.message_factory.set_position_target_local_ned_encode(
+				0, 0, 0, mavutil.mavlink.MAV_FRAME_LOCAL_NED,
+				0b0000111111000111,
+				0, 0, 0,
+				self.WAYPOINT_SPEED, 0, 0,
+				0, 0, 0,
+				0, 0
+			)
+			self.UAS_dk.send_mavlink(msg)
+			time.sleep(0.5)
+
+			if self.currWP_index == 2:
+				self.WAYPOINT_SPEED = 0
+
+
+		
+
 	def waypoint_reached (self, latitude_deg, longitude_deg, radius ):
 		"""
 		Check if the UAS has reached a specified waypoint.
@@ -233,6 +253,7 @@ class ObstacleDistance3D:
 			print(f"Distance to waypoint: {distance}")
 			time.sleep(.5)
 		print("REACHED WAYPOINT") 
+		self.currWP_index += 1
 		return True     
 		return distance
 	
@@ -398,9 +419,11 @@ if __name__ == '__main__':
 	obstacle_distance_node = ObstacleDistance3D()
 	
 	#p1 = multiprocessing.Process(target=obstacle_distance_node.dk_waypoint_lap)
+	velocity_thread = threading.Thread(target=obstacle_distance_node.velocity_loop)
 	waypoint_thread = threading.Thread(target=obstacle_distance_node.dk_waypoint_lap)
 	time.sleep(5)
 	#rospy.spin()
+	velocity_thread.start()
 	waypoint_thread.start()
 	rospy.spin()
 
