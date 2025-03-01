@@ -1,0 +1,168 @@
+#!/usr/bin/env python
+
+import rospy
+import _thread
+import threading
+import time
+import mavros
+
+from math import *
+from mavros.utils import *
+from mavros_msgs.msg import State, ParamValue, WaypointReached, GlobalPositionTarget
+from mavros_msgs.srv import ParamSet
+#from geographic_msgs.msg import GeoPoseStamped
+from sensor_msgs.msg import NavSatFix
+from haversine import haversine, Unit
+
+
+class WaypointMission:
+    """
+    This class sends position targets to FCU's position controller
+    """
+    
+    
+    def __init__(self):
+        rospy.init_node('auto_test2')
+        mavros.set_namespace()
+
+        # ROS topics to verify state
+        self.current_state = State()
+        rospy.Subscriber('/mavros/state', State, self.state_callback)
+
+        self.pub = rospy.Publisher('/mavros/setpoint_raw/global', GlobalPositionTarget, queue_size=1)
+        while self.pub.get_num_connections() == 0:
+            rospy.sleep(.1)
+
+        # Set services
+        rospy.loginfo("Waiting for services...")
+
+        rospy.loginfo("Services Ready!")
+
+        self.waypoints = [
+            (21.4001171, -157.7644725, 22),
+            (21.4004055, -157.7642325, 22),
+            (21.4003618, -157.7642030, 22),
+            (21.4001770, -157.7646589, 22)
+        ]
+        self.latitude = [
+            21.4001171,
+            21.4004055,
+            21.4003618,
+            21.4001770
+        ]
+        self.longitude = [
+            -157.7644725,
+            -157.7642325,
+            -157.7642030,
+            -157.7646589,
+
+        ]
+        self.altitude = [
+            10,
+            10,
+            10,
+            10
+        ]
+
+        # Variable to track which waypoint was reached
+        self.current_waypoint_index = 0
+        self.waypoint_reached_event = threading.Event()
+        
+        rospy.Subscriber('/mavros/mission/reached', WaypointReached, self.reached_callback)
+
+        
+    def state_callback(self, msg):
+        self.current_state = msg
+        
+    def reached_callback(self, msg):
+        rospy.loginfo(f"Waypoint {msg.wp_seq} reached")
+        self.last_wp_reached = msg.wp_seq
+        self.waypoint_reached_event.set()  # Signal that the waypoint is reached
+
+
+    def is_armed(self):
+
+        rospy.loginfo("Waiting to be ARMED...")
+        while not(self.current_state.armed):
+            rospy.loginfo("Waiting to be ARMED...")
+            #rospy.loginfo(self.current_state)
+            rospy.sleep(1)
+            
+        rospy.loginfo("ARMED")
+        rospy.sleep(1)
+
+
+
+    def is_guided(self):
+        
+        rospy.loginfo("Waiting to be GUIDED")
+        while not (self.current_state.mode == "GUIDED"):
+            rospy.loginfo("Waiting to be GUIDED...")
+            #rospy.loginfo(self.current_state)
+            rospy.sleep(1)
+        rospy.loginfo("GUIDED")
+            
+
+    def send_global_position_target(self, lat, lon, alt):
+        msg = GlobalPositionTarget()
+        msg.header.stamp = rospy.Time.now()
+        msg.coordinate_frame = 6
+        msg.type_mask = 4088
+
+        msg.latitude = lat  # Latitude
+        msg.longitude = lon  # Longitude
+        msg.altitude = alt  # Altitude
+
+        self.pub.publish(msg)
+        rospy.loginfo("Sent Waypoint")
+
+    def waypoint_lap(self):
+        rospy.loginfo("=====Waypoint Lap Starting!=====")
+        for idx, (lat, lon, alt) in enumerate(self.waypoints):
+            self.waypoint_reached_event.clear()  # Reset the event
+            rospy.loginfo(f"Sending Waypoint {idx}")
+            self.send_global_position_target(lat, lon, alt)
+
+            # Wait until the drone reaches this waypoint
+            rospy.loginfo(f"Waiting for waypoint {idx} to be reached...")
+            self.waypoint_reached_event.wait()
+
+        rospy.loginfo("Waypoint Lap Completed!")
+
+
+    def set_param(self, param_name, param_value):
+        rospy.wait_for_service('/mavros/param/set')
+        set_param_service = rospy.ServiceProxy('/mavros/param/set', ParamSet)
+
+        param = ParamValue()
+        param.integer = int(param_value)
+        param.real = float(param_value)
+
+        response = set_param_service(param_name, param)
+        if response.success:
+            rospy.loginfo(f"Sucessfully set Parameter {param_name} to {param_value}")
+        else:
+            rospy.loginfo(f"Failed to set parameter {param_name}")
+
+
+
+if __name__ == '__main__':
+    mission = WaypointMission()
+        
+    mission.set_param('WPNAV_SPEED', 2000) #cm/s
+    mission.set_param('WPNAV_SPEED_DN', 2000) #cm/s
+    mission.set_param('WPNAV_SPEED_UP', 2000) #cm/s
+
+    mission.is_armed()
+    mission.is_guided()
+
+    #mission.send_global_position_target(mission.latitude[0], mission.longitude[0], mission.altitude[0])
+    #mission.send_global_position_target(mission.latitude[1], mission.longitude[1], mission.altitude[1])
+    #mission.send_global_position_target(mission.latitude[2], mission.longitude[2], mission.altitude[2])
+
+    mission.waypoint_lap()
+    rospy.loginfo("Mission Completed!")
+    rospy.spin()
+
+        
+
