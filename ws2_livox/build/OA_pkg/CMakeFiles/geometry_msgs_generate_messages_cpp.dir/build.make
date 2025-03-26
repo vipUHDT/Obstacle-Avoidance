@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uhdt/ws2_livox/src
+CMAKE_SOURCE_DIR = /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uhdt/ws2_livox/build
+CMAKE_BINARY_DIR = /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build
 
 # Utility rule file for geometry_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ OA_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build: geometry_msgs_g
 .PHONY : OA_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 
 OA_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
-	cd /home/uhdt/ws2_livox/build/OA_pkg && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/OA_pkg && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : OA_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 
 OA_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend:
-	cd /home/uhdt/ws2_livox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uhdt/ws2_livox/src /home/uhdt/ws2_livox/src/OA_pkg /home/uhdt/ws2_livox/build /home/uhdt/ws2_livox/build/OA_pkg /home/uhdt/ws2_livox/build/OA_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/OA_pkg /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/OA_pkg /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/OA_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : OA_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
 

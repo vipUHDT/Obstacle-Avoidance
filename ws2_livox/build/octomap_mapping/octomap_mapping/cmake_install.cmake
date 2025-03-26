@@ -1,8 +1,8 @@
-# Install script for directory: /home/uhdt/ws2_livox/src/octomap_mapping/octomap_mapping
+# Install script for directory: /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/octomap_mapping/octomap_mapping
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uhdt/ws2_livox/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octomap_mapping" TYPE FILE FILES "/home/uhdt/ws2_livox/src/octomap_mapping/octomap_mapping/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/octomap_mapping" TYPE FILE FILES "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/octomap_mapping/octomap_mapping/package.xml")
 endif()
 

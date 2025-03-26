@@ -10,7 +10,6 @@ project(OA_pkg)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
-  dronekit
 )
 
 ## System dependencies are found with CMake's conventions

@@ -416,9 +416,9 @@ MLSConfig::GroupDescription<MLSConfig::DEFAULT, MLSConfig> Default("Default", ""
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.spatial_locator = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(MLSConfig::AbstractParamDescriptionConstPtr(new MLSConfig::ParamDescription<int>("spatial_locator", "int", 0, "Set the spatial locator", "{'enum': [{'name': 'ANN', 'type': 'int', 'value': 0, 'srcline': 9, 'srcfile': '/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'ANN', 'ctype': 'int', 'cconsttype': 'const int'}, {'name': 'FLANN', 'type': 'int', 'value': 1, 'srcline': 9, 'srcfile': '/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'FLANN', 'ctype': 'int', 'cconsttype': 'const int'}, {'name': 'organized', 'type': 'int', 'value': 2, 'srcline': 9, 'srcfile': '/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'Dense/organized data locator', 'ctype': 'int', 'cconsttype': 'const int'}], 'enum_description': 'Set the spatial locator'}", &MLSConfig::spatial_locator)));
+      Default.abstract_parameters.push_back(MLSConfig::AbstractParamDescriptionConstPtr(new MLSConfig::ParamDescription<int>("spatial_locator", "int", 0, "Set the spatial locator", "{'enum': [{'name': 'ANN', 'type': 'int', 'value': 0, 'srcline': 9, 'srcfile': '/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'ANN', 'ctype': 'int', 'cconsttype': 'const int'}, {'name': 'FLANN', 'type': 'int', 'value': 1, 'srcline': 9, 'srcfile': '/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'FLANN', 'ctype': 'int', 'cconsttype': 'const int'}, {'name': 'organized', 'type': 'int', 'value': 2, 'srcline': 9, 'srcfile': '/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'Dense/organized data locator', 'ctype': 'int', 'cconsttype': 'const int'}], 'enum_description': 'Set the spatial locator'}", &MLSConfig::spatial_locator)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(MLSConfig::AbstractParamDescriptionConstPtr(new MLSConfig::ParamDescription<int>("spatial_locator", "int", 0, "Set the spatial locator", "{'enum': [{'name': 'ANN', 'type': 'int', 'value': 0, 'srcline': 9, 'srcfile': '/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'ANN', 'ctype': 'int', 'cconsttype': 'const int'}, {'name': 'FLANN', 'type': 'int', 'value': 1, 'srcline': 9, 'srcfile': '/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'FLANN', 'ctype': 'int', 'cconsttype': 'const int'}, {'name': 'organized', 'type': 'int', 'value': 2, 'srcline': 9, 'srcfile': '/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'Dense/organized data locator', 'ctype': 'int', 'cconsttype': 'const int'}], 'enum_description': 'Set the spatial locator'}", &MLSConfig::spatial_locator)));
+      __param_descriptions__.push_back(MLSConfig::AbstractParamDescriptionConstPtr(new MLSConfig::ParamDescription<int>("spatial_locator", "int", 0, "Set the spatial locator", "{'enum': [{'name': 'ANN', 'type': 'int', 'value': 0, 'srcline': 9, 'srcfile': '/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'ANN', 'ctype': 'int', 'cconsttype': 'const int'}, {'name': 'FLANN', 'type': 'int', 'value': 1, 'srcline': 9, 'srcfile': '/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'FLANN', 'ctype': 'int', 'cconsttype': 'const int'}, {'name': 'organized', 'type': 'int', 'value': 2, 'srcline': 9, 'srcfile': '/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg', 'description': 'Dense/organized data locator', 'ctype': 'int', 'cconsttype': 'const int'}], 'enum_description': 'Set the spatial locator'}", &MLSConfig::spatial_locator)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.search_radius = 0.0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -538,11 +538,11 @@ MLSConfig::GroupDescription<MLSConfig::DEFAULT, MLSConfig> Default("Default", ""
     return statics;
   }
 
-//#line 9 "/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg"
+//#line 9 "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg"
       const int MLS_ANN = 0;
-//#line 9 "/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg"
+//#line 9 "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg"
       const int MLS_FLANN = 1;
-//#line 9 "/home/uhdt/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg"
+//#line 9 "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/perception_pcl/pcl_ros/cfg/MLS.cfg"
       const int MLS_organized = 2;
 }
 

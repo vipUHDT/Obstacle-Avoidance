@@ -1,4 +1,4 @@
-prefix=/home/uhdt/ws2_livox/install
+prefix=/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install
 
 Name: octomap_server
 Description: Description of octomap_server

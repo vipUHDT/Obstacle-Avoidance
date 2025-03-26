@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/liboctomap_server.pdb"
-  "/home/uhdt/ws2_livox/devel/lib/liboctomap_server.so"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/liboctomap_server.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/liboctomap_server.so"
   "CMakeFiles/octomap_server.dir/src/OctomapServer.cpp.o"
   "CMakeFiles/octomap_server.dir/src/OctomapServerMultilayer.cpp.o"
   "CMakeFiles/octomap_server.dir/src/TrackingOctomapServer.cpp.o"

@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest/googlemock
-# Build directory: /home/uhdt/ws2_livox/build/gtest/googlemock
+# Build directory: /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/gtest/googlemock
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

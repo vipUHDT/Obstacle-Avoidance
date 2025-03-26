@@ -1,2 +1,2 @@
-OA_pkg:livox_ros_driver2:octomap_mapping/octomap_mapping:octomap_mapping/octomap_server:perception_pcl/pcl_conversions:perception_pcl/pcl_ros:perception_pcl/perception_pcl
--DCATKIN_DEVEL_PREFIX=/home/uhdt/ws2_livox/devel -DCMAKE_INSTALL_PREFIX=/home/uhdt/ws2_livox/install -G Unix Makefiles
+OA_pkg:octomap_mapping/octomap_mapping:octomap_mapping/octomap_server:perception_pcl/pcl_conversions:perception_pcl/pcl_ros:perception_pcl/perception_pcl
+-DCATKIN_DEVEL_PREFIX=/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel -DCMAKE_INSTALL_PREFIX=/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install -G Unix Makefiles

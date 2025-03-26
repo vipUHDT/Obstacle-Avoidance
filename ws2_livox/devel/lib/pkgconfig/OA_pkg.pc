@@ -1,4 +1,4 @@
-prefix=/home/uhdt/ws2_livox/devel
+prefix=/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel
 
 Name: OA_pkg
 Description: Description of OA_pkg

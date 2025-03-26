@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uhdt/ws2_livox/src
+CMAKE_SOURCE_DIR = /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uhdt/ws2_livox/build
+CMAKE_BINARY_DIR = /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build
 
 # Utility rule file for visualization_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ octomap_mapping/octomap_server/CMakeFiles/visualization_msgs_generate_messages_c
 .PHONY : octomap_mapping/octomap_server/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
 
 octomap_mapping/octomap_server/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean:
-	cd /home/uhdt/ws2_livox/build/octomap_mapping/octomap_server && $(CMAKE_COMMAND) -P CMakeFiles/visualization_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_server && $(CMAKE_COMMAND) -P CMakeFiles/visualization_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : octomap_mapping/octomap_server/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/clean
 
 octomap_mapping/octomap_server/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/depend:
-	cd /home/uhdt/ws2_livox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uhdt/ws2_livox/src /home/uhdt/ws2_livox/src/octomap_mapping/octomap_server /home/uhdt/ws2_livox/build /home/uhdt/ws2_livox/build/octomap_mapping/octomap_server /home/uhdt/ws2_livox/build/octomap_mapping/octomap_server/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/octomap_mapping/octomap_server /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_server /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_server/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : octomap_mapping/octomap_server/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/depend
 

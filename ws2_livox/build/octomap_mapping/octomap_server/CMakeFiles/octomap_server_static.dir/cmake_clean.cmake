@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/octomap_server/octomap_server_static"
-  "/home/uhdt/ws2_livox/devel/lib/octomap_server/octomap_server_static.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/octomap_server/octomap_server_static"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/octomap_server/octomap_server_static.pdb"
   "CMakeFiles/octomap_server_static.dir/src/octomap_server_static.cpp.o"
 )
 

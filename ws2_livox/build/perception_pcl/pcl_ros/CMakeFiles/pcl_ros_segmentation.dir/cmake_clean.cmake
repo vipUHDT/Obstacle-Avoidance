@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/libpcl_ros_segmentation.pdb"
-  "/home/uhdt/ws2_livox/devel/lib/libpcl_ros_segmentation.so"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/libpcl_ros_segmentation.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/libpcl_ros_segmentation.so"
   "CMakeFiles/pcl_ros_segmentation.dir/src/pcl_ros/segmentation/extract_clusters.cpp.o"
   "CMakeFiles/pcl_ros_segmentation.dir/src/pcl_ros/segmentation/extract_polygonal_prism_data.cpp.o"
   "CMakeFiles/pcl_ros_segmentation.dir/src/pcl_ros/segmentation/sac_segmentation.cpp.o"

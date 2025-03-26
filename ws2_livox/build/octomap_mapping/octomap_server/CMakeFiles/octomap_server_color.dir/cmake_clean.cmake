@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/liboctomap_server_color.pdb"
-  "/home/uhdt/ws2_livox/devel/lib/liboctomap_server_color.so"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/liboctomap_server_color.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/liboctomap_server_color.so"
   "CMakeFiles/octomap_server_color.dir/src/OctomapServer.cpp.o"
   "CMakeFiles/octomap_server_color.dir/src/OctomapServerMultilayer.cpp.o"
   "CMakeFiles/octomap_server_color.dir/src/TrackingOctomapServer.cpp.o"

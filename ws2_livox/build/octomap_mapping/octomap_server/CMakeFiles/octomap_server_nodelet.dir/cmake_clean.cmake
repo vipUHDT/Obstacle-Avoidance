@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/liboctomap_server_nodelet.pdb"
-  "/home/uhdt/ws2_livox/devel/lib/liboctomap_server_nodelet.so"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/liboctomap_server_nodelet.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/liboctomap_server_nodelet.so"
   "CMakeFiles/octomap_server_nodelet.dir/src/octomap_server_nodelet.cpp.o"
 )
 

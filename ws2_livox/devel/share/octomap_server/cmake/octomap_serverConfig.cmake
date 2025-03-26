@@ -67,14 +67,14 @@ set(octomap_server_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(octomap_server_SOURCE_PREFIX /home/uhdt/ws2_livox/src/octomap_mapping/octomap_server)
-  set(octomap_server_DEVEL_PREFIX /home/uhdt/ws2_livox/devel)
+  set(octomap_server_SOURCE_PREFIX /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/octomap_mapping/octomap_server)
+  set(octomap_server_DEVEL_PREFIX /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel)
   set(octomap_server_INSTALL_PREFIX "")
   set(octomap_server_PREFIX ${octomap_server_DEVEL_PREFIX})
 else()
   set(octomap_server_SOURCE_PREFIX "")
   set(octomap_server_DEVEL_PREFIX "")
-  set(octomap_server_INSTALL_PREFIX /home/uhdt/ws2_livox/install)
+  set(octomap_server_INSTALL_PREFIX /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install)
   set(octomap_server_PREFIX ${octomap_server_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(octomap_server_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/uhdt/ws2_livox/devel/include;/home/uhdt/ws2_livox/src/octomap_mapping/octomap_server/include;/opt/ros/noetic/include " STREQUAL " ")
+if(NOT "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/include;/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/octomap_mapping/octomap_server/include;/opt/ros/noetic/include " STREQUAL " ")
   set(octomap_server_INCLUDE_DIRS "")
-  set(_include_dirs "/home/uhdt/ws2_livox/devel/include;/home/uhdt/ws2_livox/src/octomap_mapping/octomap_server/include;/opt/ros/noetic/include")
+  set(_include_dirs "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/include;/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/octomap_mapping/octomap_server/include;/opt/ros/noetic/include")
   if(NOT "https://github.com/OctoMap/octomap_mapping/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/OctoMap/octomap_mapping/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://www.ros.org/wiki/octomap_server " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/uhdt/ws2_livox/devel/include;/home/uhdt/ws2_livox/src/octomap_mapp
         message(FATAL_ERROR "Project 'octomap_server' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'octomap_server' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/uhdt/ws2_livox/src/octomap_mapping/octomap_server/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'octomap_server' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/octomap_mapping/octomap_server/${idir}'.  ${_report}")
     endif()
     _list_append_unique(octomap_server_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/uhdt/ws2_livox/devel/lib;/home/uhdt/ws2_livox/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib;/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

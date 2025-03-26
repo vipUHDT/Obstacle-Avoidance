@@ -1,8 +1,8 @@
-# Install script for directory: /home/uhdt/ws2_livox/src
+# Install script for directory: /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uhdt/ws2_livox/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -49,95 +49,94 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/uhdt/ws2_livox/install/_setup_util.py")
+   "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/uhdt/ws2_livox/install" TYPE PROGRAM FILES "/home/uhdt/ws2_livox/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install" TYPE PROGRAM FILES "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/uhdt/ws2_livox/install/env.sh")
+   "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/uhdt/ws2_livox/install" TYPE PROGRAM FILES "/home/uhdt/ws2_livox/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install" TYPE PROGRAM FILES "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/uhdt/ws2_livox/install/setup.bash;/home/uhdt/ws2_livox/install/local_setup.bash")
+   "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/setup.bash;/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/uhdt/ws2_livox/install" TYPE FILE FILES
-    "/home/uhdt/ws2_livox/build/catkin_generated/installspace/setup.bash"
-    "/home/uhdt/ws2_livox/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install" TYPE FILE FILES
+    "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/setup.bash"
+    "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/uhdt/ws2_livox/install/setup.sh;/home/uhdt/ws2_livox/install/local_setup.sh")
+   "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/setup.sh;/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/uhdt/ws2_livox/install" TYPE FILE FILES
-    "/home/uhdt/ws2_livox/build/catkin_generated/installspace/setup.sh"
-    "/home/uhdt/ws2_livox/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install" TYPE FILE FILES
+    "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/setup.sh"
+    "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/uhdt/ws2_livox/install/setup.zsh;/home/uhdt/ws2_livox/install/local_setup.zsh")
+   "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/setup.zsh;/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/uhdt/ws2_livox/install" TYPE FILE FILES
-    "/home/uhdt/ws2_livox/build/catkin_generated/installspace/setup.zsh"
-    "/home/uhdt/ws2_livox/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install" TYPE FILE FILES
+    "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/setup.zsh"
+    "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/uhdt/ws2_livox/install/.rosinstall")
+   "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/uhdt/ws2_livox/install" TYPE FILE FILES "/home/uhdt/ws2_livox/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install" TYPE FILE FILES "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/uhdt/ws2_livox/build/gtest/cmake_install.cmake")
-  include("/home/uhdt/ws2_livox/build/octomap_mapping/octomap_mapping/cmake_install.cmake")
-  include("/home/uhdt/ws2_livox/build/perception_pcl/perception_pcl/cmake_install.cmake")
-  include("/home/uhdt/ws2_livox/build/OA_pkg/cmake_install.cmake")
-  include("/home/uhdt/ws2_livox/build/perception_pcl/pcl_conversions/cmake_install.cmake")
-  include("/home/uhdt/ws2_livox/build/perception_pcl/pcl_ros/cmake_install.cmake")
-  include("/home/uhdt/ws2_livox/build/livox_ros_driver2/cmake_install.cmake")
-  include("/home/uhdt/ws2_livox/build/octomap_mapping/octomap_server/cmake_install.cmake")
+  include("/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/gtest/cmake_install.cmake")
+  include("/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_mapping/cmake_install.cmake")
+  include("/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/perception_pcl/perception_pcl/cmake_install.cmake")
+  include("/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/OA_pkg/cmake_install.cmake")
+  include("/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/perception_pcl/pcl_conversions/cmake_install.cmake")
+  include("/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/perception_pcl/pcl_ros/cmake_install.cmake")
+  include("/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_server/cmake_install.cmake")
 
 endif()
 
@@ -149,5 +148,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/uhdt/ws2_livox/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

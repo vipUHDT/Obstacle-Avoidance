@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/libpcl_ros_tf.pdb"
-  "/home/uhdt/ws2_livox/devel/lib/libpcl_ros_tf.so"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/libpcl_ros_tf.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/libpcl_ros_tf.so"
   "CMakeFiles/pcl_ros_tf.dir/src/transforms.cpp.o"
 )
 

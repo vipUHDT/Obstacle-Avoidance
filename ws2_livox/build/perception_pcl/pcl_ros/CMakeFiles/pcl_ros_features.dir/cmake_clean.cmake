@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/libpcl_ros_features.pdb"
-  "/home/uhdt/ws2_livox/devel/lib/libpcl_ros_features.so"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/libpcl_ros_features.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/libpcl_ros_features.so"
   "CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/boundary.cpp.o"
   "CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/feature.cpp.o"
   "CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/fpfh.cpp.o"

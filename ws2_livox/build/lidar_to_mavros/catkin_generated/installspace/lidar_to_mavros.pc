@@ -1,8 +1,0 @@
-prefix=/home/uhdt/ws2_livox/install
-
-Name: lidar_to_mavros
-Description: Description of lidar_to_mavros
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib -llidar_to_mavros
-Requires: mavros_msgs roscpp sensor_msgs std_msgs

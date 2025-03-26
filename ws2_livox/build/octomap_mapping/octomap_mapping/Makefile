@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uhdt/ws2_livox/src
+CMAKE_SOURCE_DIR = /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uhdt/ws2_livox/build
+CMAKE_BINARY_DIR = /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/uhdt/ws2_livox/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uhdt/ws2_livox/build/CMakeFiles /home/uhdt/ws2_livox/build/octomap_mapping/octomap_mapping/CMakeFiles/progress.marks
-	cd /home/uhdt/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uhdt/ws2_livox/build/CMakeFiles 0
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/CMakeFiles /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_mapping/CMakeFiles/progress.marks
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/uhdt/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/clean
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/uhdt/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/preinstall
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/uhdt/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/preinstall
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/uhdt/ws2_livox/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 octomap_mapping/octomap_mapping/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/uhdt/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(MAKE) -f CMakeFiles/Makefile2 octomap_mapping/octomap_mapping/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : octomap_mapping/octomap_mapping/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ _catkin_empty_exported_target: octomap_mapping/octomap_mapping/CMakeFiles/_catki
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/uhdt/ws2_livox/build && $(MAKE) -f octomap_mapping/octomap_mapping/CMakeFiles/_catkin_empty_exported_target.dir/build.make octomap_mapping/octomap_mapping/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(MAKE) -f octomap_mapping/octomap_mapping/CMakeFiles/_catkin_empty_exported_target.dir/build.make octomap_mapping/octomap_mapping/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -207,6 +207,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/uhdt/ws2_livox/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uhdt/ws2_livox/src
+CMAKE_SOURCE_DIR = /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uhdt/ws2_livox/build
+CMAKE_BINARY_DIR = /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build
 
 # Utility rule file for octomap_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ octomap_mapping/octomap_server/CMakeFiles/octomap_msgs_generate_messages_lisp.di
 .PHONY : octomap_mapping/octomap_server/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
 
 octomap_mapping/octomap_server/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/clean:
-	cd /home/uhdt/ws2_livox/build/octomap_mapping/octomap_server && $(CMAKE_COMMAND) -P CMakeFiles/octomap_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_server && $(CMAKE_COMMAND) -P CMakeFiles/octomap_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : octomap_mapping/octomap_server/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/clean
 
 octomap_mapping/octomap_server/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/depend:
-	cd /home/uhdt/ws2_livox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uhdt/ws2_livox/src /home/uhdt/ws2_livox/src/octomap_mapping/octomap_server /home/uhdt/ws2_livox/build /home/uhdt/ws2_livox/build/octomap_mapping/octomap_server /home/uhdt/ws2_livox/build/octomap_mapping/octomap_server/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/octomap_mapping/octomap_server /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_server /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/octomap_mapping/octomap_server/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : octomap_mapping/octomap_server/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/depend
 

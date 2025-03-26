@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/pcl_ros/pcd_to_pointcloud"
-  "/home/uhdt/ws2_livox/devel/lib/pcl_ros/pcd_to_pointcloud.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/pcl_ros/pcd_to_pointcloud"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/pcl_ros/pcd_to_pointcloud.pdb"
   "CMakeFiles/pcd_to_pointcloud.dir/tools/pcd_to_pointcloud.cpp.o"
 )
 

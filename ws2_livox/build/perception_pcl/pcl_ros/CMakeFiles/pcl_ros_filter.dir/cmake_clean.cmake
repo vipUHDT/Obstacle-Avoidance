@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uhdt/ws2_livox/devel/lib/libpcl_ros_filter.pdb"
-  "/home/uhdt/ws2_livox/devel/lib/libpcl_ros_filter.so"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/libpcl_ros_filter.pdb"
+  "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel/lib/libpcl_ros_filter.so"
   "CMakeFiles/pcl_ros_filter.dir/src/pcl_ros/filters/filter.cpp.o"
 )
 

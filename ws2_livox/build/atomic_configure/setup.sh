@@ -11,7 +11,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/uhdt/ws2_livox/devel}
+: ${_CATKIN_SETUP_DIR:=/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/devel}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

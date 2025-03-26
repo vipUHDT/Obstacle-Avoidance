@@ -1,8 +1,8 @@
-# Install script for directory: /home/uhdt/ws2_livox/src/OA_pkg
+# Install script for directory: /home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/OA_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uhdt/ws2_livox/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uhdt/ws2_livox/build/OA_pkg/catkin_generated/installspace/OA_pkg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/OA_pkg/catkin_generated/installspace/OA_pkg.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OA_pkg/cmake" TYPE FILE FILES
-    "/home/uhdt/ws2_livox/build/OA_pkg/catkin_generated/installspace/OA_pkgConfig.cmake"
-    "/home/uhdt/ws2_livox/build/OA_pkg/catkin_generated/installspace/OA_pkgConfig-version.cmake"
+    "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/OA_pkg/catkin_generated/installspace/OA_pkgConfig.cmake"
+    "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/OA_pkg/catkin_generated/installspace/OA_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OA_pkg" TYPE FILE FILES "/home/uhdt/ws2_livox/src/OA_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OA_pkg" TYPE FILE FILES "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/src/OA_pkg/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/OA_pkg" TYPE PROGRAM FILES "/home/uhdt/ws2_livox/build/OA_pkg/catkin_generated/installspace/obstacle_distance_3d_node.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/OA_pkg" TYPE PROGRAM FILES "/home/uhdt/Documents/GitHub/Obstacle-Avoidance/ws2_livox/build/OA_pkg/catkin_generated/installspace/obstacle_distance_3d_node.py")
 endif()
 
