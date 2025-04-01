@@ -5,12 +5,13 @@ import _thread
 import threading
 import time
 import mavros
+import Camera
 import subprocess
 import re
 import os
 import shutil
 import tf
-import math 
+import math
 import multiprocessing
 
 from math import *
@@ -19,8 +20,8 @@ from mavros_msgs.msg import State, ParamValue, WaypointReached, GlobalPositionTa
 from mavros_msgs.srv import ParamSet
 #from geographic_msgs.msg import GeoPoseStamped
 from sensor_msgs.msg import NavSatFix, Imu
-from std_msgs.msg import Float64
 from haversine import haversine, Unit
+from std_msgs.msg import Float64
 
 
 class WaypointMission:
@@ -30,7 +31,7 @@ class WaypointMission:
     
     
     def __init__(self):
-        rospy.init_node('auto_test2')
+        rospy.init_node('auto_test3')
         mavros.set_namespace()
 
         # ROS topics to verify state
@@ -38,67 +39,54 @@ class WaypointMission:
         rospy.Subscriber('/mavros/state', State, self.state_callback)
 
         self.pub = rospy.Publisher('/mavros/setpoint_raw/global', GlobalPositionTarget, queue_size=1)
-
         while self.pub.get_num_connections() == 0:
             rospy.sleep(.1)
 
-        # Set services
-        rospy.loginfo("Waiting for services...")
-
-        rospy.loginfo("Services Ready!")
-
-        # Lattitude, Longitude, Altitude
-        self.waypoints = [
-            (21.4001171, -157.7644725, 22),
-            (21.4004055, -157.7642325, 22),
-            (21.4003618, -157.7642030, 22),
-            (21.4001770, -157.7646589, 22)
-        ]
-
-        self.search_area_waypoints = [
-            (21.4002344, -157.7644624, 22),
-            (21.4003056, -157.7642258, 30),
-            (21.4004118, -157.7640527, 30),
-            (21.4004817, -157.7638744, 30)
-        ]
-
-        self.payload_delivery_latitude = [
-            
-        ]
-
-        self.payload_delivery_longitude = [
-            
-        ]
-
-        self.payload_delivery_compartment = [
-
-        ]
-
-        self.alt_AD = 26
-        self.alt_IP = 27
-
-
+        # writing file variable
+        self.attitude_time = []
+        self.deliver_payload_time = []
+        self.geotag_time = []
+        self.search_area_waypoint_time = []
         self.subprocess_execute_time = []
+        self.waypoint_lap_time = []
+        self.payload_delivery_time = []
 
+        # declaring initial variable
         self.pitch = 0.0
         self.roll = 0.0
         self.yaw = 0.0
         self.lat = 0.0
         self.lon = 0.0
         self.alt = 10.0
-
         self.drone_sensory = [self.pitch, self.roll, self.yaw, self.lat, self.lon, self.alt]
-
-        self.end_mission_latitude = 21.4002007
-        self.end_mission_longitude = -157.7648252
-        self.end_mission_altitude = 22
-
-
-        # Variable to track which waypoint was reached
-        self.current_waypoint_index = 0
+        self.current_waypoint_index = -1
         self.waypoint_reached_event = threading.Event()
+
+        # Lat, Lon, Alt
+        self.waypoints = [
+            (21.4002848, -157.7646783, 22.68),
+            (21.4005753, -157.7641225, 22.68)
+        ]
+
+        # Lat, Lon, Alt
+        self.search_area_waypoints = [
+            (21.4003387, -157.7644886, 22.68),
+            (21.4003587, -157.7645791, 22.68),
+            (21.4002894, -157.7645302, 22.68)
+        ]
+
+        # Lat, Lon, Compartment num
+        self.payload_delivery_waypoints = [
+
+        ]
+
+        self.end_mission_latitude = 21.4003681
+        self.end_mission_longitude = -157.7640635
+        self.end_mission_altitude = 22
         
         rospy.Subscriber('/mavros/mission/reached', WaypointReached, self.reached_callback)
+
+        rospy.loginfo("AUTONOMOUS SCRIPT IS READY!")
 
         
     def state_callback(self, msg):
@@ -106,14 +94,16 @@ class WaypointMission:
         ROS callback function to return the state of UAS
         
         """
+
         self.current_state = msg
         
     def reached_callback(self, msg):
         """
-        ROS callback function to signal that waypoint has been reached
+        ROS callback function to return the state of UAS
+        
         """
-        rospy.loginfo(f"Waypoint {msg.wp_seq} reached")
-        self.last_wp_reached = msg.wp_seq
+        rospy.loginfo(f"Waypoint {self.current_waypoint_index} reached")
+        self.current_waypoint_index += 1
         self.waypoint_reached_event.set()  # Signal that the waypoint is reached
 
 
@@ -146,6 +136,7 @@ class WaypointMission:
             #rospy.loginfo(self.current_state)
             rospy.sleep(1)
         rospy.loginfo("GUIDED")
+        rospy.loginfo("!------------------ MISSION STARTING ----------------------!")
 
     def euler_quaternion(self, quaternion):
         """
@@ -160,6 +151,12 @@ class WaypointMission:
         return math.degrees(euler[0]), math.degrees(euler[1]), math.degrees(euler[2])
 
     def attitude(self):
+        """
+        Pulls attitude from UAS using MAVROS topics
+
+        Saves information drone_sensory array
+        """
+        start = time.time()
 
         # Get the latest IMU data (orientation)
         imu_msg = rospy.wait_for_message("/mavros/imu/data", Imu, timeout=5)
@@ -169,15 +166,19 @@ class WaypointMission:
         gps_msg = rospy.wait_for_message("/mavros/global_position/global",NavSatFix, timeout=5)
         self.lat, self.lon = gps_msg.latitude, gps_msg.longitude
 
-        # Get the latest altitude data (meters)
         rel_alt_msg = rospy.wait_for_message("/mavros/global_position/rel_alt", Float64, timeout=5)
         self.alt = rel_alt_msg.data
 
         self.drone_sensory = [self.pitch, self.roll, self.yaw, self.lat, self.lon, self.alt]
 
         rospy.loginfo(f"\nRoll: {self.roll}\nPitch: {self.pitch}\nYaw: {self.yaw}\nlat: {self.lat}\nlon: {self.lon}\naltitude: {self.alt}")
-        rospy.loginfo(self.drone_sensory)
+        rospy.loginfo(f"(Attitude Array: {self.drone_sensory}")
+
+        end = time.time()
+        difference = end - start
+        self.attitude_time.append(difference)
         rospy.loginfo("Drone Sensory data collected")
+
 
     def geotag(self, image_name):
         """
@@ -190,10 +191,10 @@ class WaypointMission:
         :param drone_sensory: The drone sensory data.
         :return: None
         """
-        #start = time.time()
-        # Update attitude info 
-        self.attitude()
+        
+        start = time.time()
         # Geotagging photo with the attitude and GPS coordinate
+        self.attitude()
         pyr = ('pitch:' + str(self.drone_sensory[0]) + ' yaw:' + str(self.drone_sensory[2]) + ' roll:' + str(self.drone_sensory[1]))
         print(pyr)
         print( self.drone_sensory[3])
@@ -203,11 +204,15 @@ class WaypointMission:
         tag_alt_command = ('exiftool','-overwrite_original', '-exif:gpsAltitude=' + '\'' + str(self.drone_sensory[5]) + '\'', str(image_name))
         #self.image_number += 1 
         #executing the tag command in ssh
-        '''subprocess.run(tag_pyr_command,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+
+        # DEBUGGING
+        '''
+        subprocess.run(tag_pyr_command,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         subprocess.run(tag_lat_command,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         subprocess.run(tag_long_command,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-        subprocess.run(tag_alt_command,stdout=subprocess.PIPE,stderr=subprocess.PIPE)'''
-                
+        subprocess.run(tag_alt_command,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        '''
+
         p1 = multiprocessing.Process(target = self.subprocess_execute, args = (tag_pyr_command,))
         p2 = multiprocessing.Process(target = self.subprocess_execute, args = (tag_lat_command,))
         p3 = multiprocessing.Process(target = self.subprocess_execute, args = (tag_long_command,))
@@ -227,15 +232,17 @@ class WaypointMission:
         p4.join()
         
 
-        #end = time.time()
-        #difference = end - start
-        #self.geotag_time.append(difference)
+        end = time.time()
+        difference = end - start
+        self.geotag_time.append(difference)
         return print(f"{image_name} GEOTAGGED")
+        
+        #DEBUGGING
+        #return print("Dummy print")
 
     def subprocess_execute(self, command):
         """
-        Execute a subprocess command with the provided arguments
-        Record the execution time and success
+        Execute a subprocess command with the provided arguments and record the execution time.
 
         Args:
             command (str): The subprocess command to execute.
@@ -257,8 +264,7 @@ class WaypointMission:
             rospy.logerr(f"Subprocess command failed: {result.stderr}")
         else:
             rospy.loginfo(f"Subprocess command successful: {result.stdout}")
-
-
+        
     def RTL_stat( self ):
         """
         Check if the UAS is in "Return to Launch" mode.
@@ -350,9 +356,6 @@ class WaypointMission:
             
 
     def send_global_position_target(self, lat, lon, alt):
-        """
-        
-        """
         msg = GlobalPositionTarget()
         msg.header.stamp = rospy.Time.now()
         msg.coordinate_frame = 6
@@ -366,18 +369,25 @@ class WaypointMission:
         rospy.loginfo("Sent Waypoint")
 
     def waypoint_lap(self):
-        rospy.loginfo("!=====Waypoint Lap Starting=====!")
-        for idx, (lat, lon, alt) in enumerate(self.waypoints):
+
+        start = time.time()
+
+        rospy.loginfo("=====Waypoint Lap Starting!=====")
+        for i, (lat, lon, alt) in enumerate(self.waypoints):
             self.waypoint_reached_event.clear()  # Reset the event
-            rospy.loginfo(f"Sending Waypoint {idx}")
+            rospy.loginfo(f"Sending Waypoint {i}")
             self.send_global_position_target(lat, lon, alt)
 
             # Wait until the drone reaches this waypoint
-            rospy.loginfo(f"Waiting for waypoint {idx} to be reached...")
+            rospy.loginfo(f"Waiting for waypoint {i} to be reached...")
             self.waypoint_reached_event.wait()
-
+        
+        end = time.time()
+        difference = end - start
+        self.waypoint_lap_time.append(difference)
+            
         rospy.loginfo("Waypoint Lap Completed!")
-
+    
     def search_area_command(self):
         """
         Define a search area waypoint. It will use the waypoint_reached() function to determine if the UAS arrived at location
@@ -413,13 +423,14 @@ class WaypointMission:
             self.waypoint_reached_event.wait()
 
             rospy.loginfo(f"DONE WITH SEARCH AREA WAYPOINT {i}")
-
+            
+            Camera.flight_testing(Camera.PRESETS, 2, self.geotag)
             rospy.loginfo("Triggered Camera")
             
 
         end = time.time()
         difference = end - start
-        #self.search_area_waypoint_time.append(difference)
+        self.search_area_waypoint_time.append(difference)
 
         return print("UAS COMPLETED SEARCH THE AREA")
 
@@ -477,22 +488,69 @@ class WaypointMission:
         average = total / len(arr)
         return average
 
+    def export(self):
+        """
+        Export, Calculate and record the average and sum of execution times for various methods.
+
+        Returns:
+            None
+        """
+        #average calculation
+        avg_attitude = self.avg(self.attitude_time)
+        avg_geotag = self.avg(self.geotag_time)
+        avg_search_area_waypoint = self.avg(self.search_area_waypoint_time)
+        avg_subprocess_execute = self.avg(self.subprocess_execute_time)
+        avg_waypoint_lap = self.avg(self.waypoint_lap_time)
+        avg_payload_delivery_time = self.avg(self.payload_delivery_time)
+
+        #sum calcualtion
+        sum_attitude = self.sum(self.attitude_time)
+        sum_geotag = self.sum(self.geotag_time)
+        sum_search_area_waypoint = self.sum(self.search_area_waypoint_time)
+        sum_subprocess_execute = self.sum(self.subprocess_execute_time)
+        sum_waypoint_lap = self.sum(self.waypoint_lap_time)
+        sum_payload_delivery_time = self.sum(self.payload_delivery_time)
+
+            
+        data_averages_and_time = [
+            ("attitude", self.attitude_time, avg_attitude, sum_attitude),
+            ("deliver_payload", self.deliver_payload_time, avg_payload_delivery_time,sum_payload_delivery_time ),
+            ("geotag", self.geotag_time, avg_geotag,sum_geotag),
+            ("search_area_waypoint", self.search_area_waypoint_time, avg_search_area_waypoint,sum_search_area_waypoint),
+            ("subprocess_execute", self.subprocess_execute_time, avg_subprocess_execute,sum_subprocess_execute),
+            ("waypoint_lap", self.waypoint_lap_time, avg_waypoint_lap,sum_waypoint_lap),
+
+        ]
+        # Edit this later
+        with open('Data_log.txt', 'a') as file:
+                for data_name, data_values, data_average, data_sum in data_averages_and_time:
+                        file.write(f"{data_name}: {data_values}\n")
+                        file.write(f"{data_name} average: {data_average} seconds\n")
+                        file.write(f"{data_name} sum: {data_sum} seconds\n\n")
+
+
 
 if __name__ == '__main__':
     mission = WaypointMission()
         
-    mission.set_param('WPNAV_SPEED', 2000) #cm/s
-    mission.set_param('WPNAV_SPEED_DN', 2000) #cm/s
-    mission.set_param('WPNAV_SPEED_UP', 2000) #cm/s
-    mission.set_param('WPNAV_RADIUS', 200) #cm
+    mission.set_param('WPNAV_SPEED', 1000) #cm/s
+    mission.set_param('WPNAV_SPEED_DN', 500) #cm/s
+    mission.set_param('WPNAV_SPEED_UP', 500) #cm/s
+    mission.set_param('GUID_OPTIONS', 64)
+    
 
-
-    mission.is_armed()
-    mission.is_guided()
-    mission.search_area_command()
+    #mission.is_armed()
+    #mission.is_guided()
 
     #mission.waypoint_lap()
-    mission.end_mission()
+
+    #Camera.flight_testing(Camera.PRESETS, 1, mission.geotag)
+
+    mission.attitude()
+    
+    #mission.search_area_command()
+    #mission.end_mission()
+
     rospy.loginfo("Mission Completed!")
     rospy.spin()
 
