@@ -314,9 +314,6 @@ class WaypointMission:
                     self.payload_delivery_compartment.append(compartment)
 
     def deliver_payload_command(self):
-        """
-        INCOMPLETE
-        """
         file_path = '/home/uhdt/UAV_software/Autonomous/Official/FINAL CODE/payload_coord.txt'
 
         while not os.path.exists( file_path ):
