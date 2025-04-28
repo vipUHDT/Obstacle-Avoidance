@@ -1,8 +1,0 @@
-prefix=/home/uhdt/ws2_livox/devel
-
-Name: OA_pkg
-Description: Description of OA_pkg
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

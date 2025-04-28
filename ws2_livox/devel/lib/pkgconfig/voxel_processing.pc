@@ -1,8 +1,0 @@
-prefix=/home/uhdt/ws2_livox/devel
-
-Name: voxel_processing
-Description: Description of voxel_processing
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
