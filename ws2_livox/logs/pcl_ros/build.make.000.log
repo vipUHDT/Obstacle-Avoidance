@@ -1,0 +1,278 @@
+[35m[1mScanning dependencies of target table_scene_lms400.pcd[0m
+Downloading http://download.ros.org/data/pcl/table_scene_lms400.pcd to /home/uhdt/ws2_livox/devel/.private/pcl_ros/share/pcl_ros/samples/data/table_scene_lms400.pcd...[35m[1mScanning dependencies of target convert_pcd_to_image[0m
+[  1%] [32mBuilding CXX object CMakeFiles/convert_pcd_to_image.dir/tools/convert_pcd_to_image.cpp.o[0m
+[  3%] [32m[1mLinking CXX executable /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/pcl_ros/convert_pcd_to_image[0m
+[  3%] Built target convert_pcd_to_image
+[35m[1mScanning dependencies of target pointcloud_to_pcd[0m
+[  4%] [32mBuilding CXX object CMakeFiles/pointcloud_to_pcd.dir/tools/pointcloud_to_pcd.cpp.o[0m
+[  6%] [32m[1mLinking CXX executable /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/pcl_ros/pointcloud_to_pcd[0m
+[35m[1mScanning dependencies of target std_srvs_generate_messages_eus[0m
+[  6%] Built target std_srvs_generate_messages_eus
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_nodejs[0m
+[  6%] Built target tf2_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_lisp[0m
+[  6%] Built target tf2_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[  6%] Built target actionlib_msgs_generate_messages_py
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[  6%] Built target actionlib_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target actionlib_generate_messages_py[0m
+[  6%] Built target actionlib_generate_messages_py
+[35m[1mScanning dependencies of target actionlib_generate_messages_nodejs[0m
+[  6%] Built target actionlib_generate_messages_nodejs
+[35m[1mScanning dependencies of target actionlib_generate_messages_cpp[0m
+[  6%] Built target actionlib_generate_messages_cpp
+[  6%] Built target pointcloud_to_pcd
+[35m[1mScanning dependencies of target tf_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target tf_generate_messages_lisp[0m
+[  6%] Built target tf_generate_messages_nodejs
+[  6%] Built target tf_generate_messages_lisp
+[35m[1mScanning dependencies of target tf_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target topic_tools_generate_messages_nodejs[0m
+[  6%] Built target tf_generate_messages_cpp
+[  6%] Built target topic_tools_generate_messages_nodejs
+[35m[1mScanning dependencies of target topic_tools_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf_generate_messages_eus[0m
+[  6%] Built target topic_tools_generate_messages_lisp
+[  6%] Built target tf_generate_messages_eus
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[  6%] Built target rosgraph_msgs_generate_messages_lisp
+[  6%] Built target roscpp_generate_messages_py
+[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[  6%] Built target roscpp_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  6%] Built target geometry_msgs_generate_messages_eus
+[  6%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target nodelet_generate_messages_lisp[0m
+[  6%] Built target std_msgs_generate_messages_nodejs
+[  6%] Built target nodelet_generate_messages_lisp
+[35m[1mScanning dependencies of target actionlib_generate_messages_lisp[0m
+[  6%] Built target actionlib_generate_messages_lisp
+[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[  6%] Built target roscpp_generate_messages_lisp
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_cpp[0m
+[  6%] Built target pcl_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  6%] Built target sensor_msgs_generate_messages_cpp
+[  6%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[  6%] Built target actionlib_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_py[0m
+[  6%] Built target dynamic_reconfigure_generate_messages_py
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_cpp[0m
+[  6%] Built target tf2_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_lisp[0m
+[  6%] Built target dynamic_reconfigure_generate_messages_lisp
+[35m[1mScanning dependencies of target std_srvs_generate_messages_lisp[0m
+[  6%] Built target std_srvs_generate_messages_lisp
+[35m[1mScanning dependencies of target dynamic_reconfigure_gencfg[0m
+[  6%] Built target dynamic_reconfigure_gencfg
+[35m[1mScanning dependencies of target nodelet_generate_messages_cpp[0m
+[  6%] Built target nodelet_generate_messages_cpp
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_eus[0m
+[  6%] Built target rosgraph_msgs_generate_messages_py
+[  6%] Built target dynamic_reconfigure_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[  6%] Built target geometry_msgs_generate_messages_nodejs
+[  6%] Built target geometry_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target topic_tools_generate_messages_eus[0m
+[  6%] Built target topic_tools_generate_messages_eus
+[  6%] Built target dynamic_reconfigure_generate_messages_cpp
+[35m[1mScanning dependencies of target topic_tools_generate_messages_py[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[  6%] Built target roscpp_generate_messages_cpp
+[  6%] Built target topic_tools_generate_messages_py
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[  6%] Built target geometry_msgs_generate_messages_py
+[  6%] Built target tf2_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[  6%] Built target sensor_msgs_generate_messages_py
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_srvs_generate_messages_cpp[0m
+[  6%] Built target std_srvs_generate_messages_cpp
+[35m[1mScanning dependencies of target actionlib_generate_messages_eus[0m
+[  6%] Built target std_msgs_generate_messages_cpp
+[  6%] Built target actionlib_generate_messages_eus
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[  6%] Built target rosgraph_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target std_srvs_generate_messages_py[0m
+[  6%] Built target rosgraph_msgs_generate_messages_eus
+[  6%] Built target std_srvs_generate_messages_py
+[35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[  6%] Built target roscpp_generate_messages_nodejs
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[  6%] Built target geometry_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[  6%] Built target actionlib_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target tf_generate_messages_py[0m
+[  6%] Built target actionlib_msgs_generate_messages_lisp
+[  6%] Built target tf_generate_messages_py
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[  6%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target nodelet_generate_messages_eus[0m
+[  6%] Built target rosgraph_msgs_generate_messages_nodejs
+[  6%] Built target nodelet_generate_messages_eus
+[35m[1mScanning dependencies of target nodelet_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target bond_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target std_srvs_generate_messages_nodejs[0m
+[  6%] Built target nodelet_generate_messages_nodejs
+[  6%] Built target bond_generate_messages_nodejs
+[  6%] Built target std_srvs_generate_messages_nodejs
+[35m[1mScanning dependencies of target nodelet_generate_messages_py[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_nodejs[0m
+[  6%] Built target tf2_msgs_generate_messages_py
+[  6%] Built target nodelet_generate_messages_py
+[  6%] Built target dynamic_reconfigure_generate_messages_nodejs
+[35m[1mScanning dependencies of target bond_generate_messages_eus[0m
+[35m[1mScanning dependencies of target bond_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[  6%] Built target bond_generate_messages_eus
+[  6%] Built target sensor_msgs_generate_messages_nodejs
+[  6%] Built target bond_generate_messages_cpp
+[35m[1mScanning dependencies of target bond_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target nodelet_topic_tools_gencfg[0m
+[  6%] Built target sensor_msgs_generate_messages_eus
+[  6%] Built target nodelet_topic_tools_gencfg
+[  6%] Built target bond_generate_messages_lisp
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target bond_generate_messages_py[0m
+[  6%] Built target pcl_msgs_generate_messages_eus
+[  6%] Built target bond_generate_messages_py
+[  6%] Built target sensor_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target topic_tools_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_py[0m
+[  6%] Built target topic_tools_generate_messages_cpp
+[  6%] Built target pcl_msgs_generate_messages_nodejs
+[  6%] Built target pcl_msgs_generate_messages_py
+[  6%] Built target pcl_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target pcl_ros_gencfg[0m
+[35m[1mScanning dependencies of target pcl_ros_tf[0m
+[35m[1mScanning dependencies of target convert_pointcloud_to_image[0m
+[35m[1mScanning dependencies of target pcd_to_pointcloud[0m
+[  7%] [34m[1mGenerating dynamic reconfigure files from cfg/EuclideanClusterExtraction.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/EuclideanClusterExtractionConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/EuclideanClusterExtractionConfig.py[0m
+[  9%] [32mBuilding CXX object CMakeFiles/convert_pointcloud_to_image.dir/tools/convert_pointcloud_to_image.cpp.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/pcd_to_pointcloud.dir/tools/pcd_to_pointcloud.cpp.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/pcl_ros_tf.dir/src/transforms.cpp.o[0m
+Generating reconfiguration files for EuclideanClusterExtraction in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/EuclideanClusterExtractionConfig.h
+[ 14%] [34m[1mGenerating dynamic reconfigure files from cfg/ExtractIndices.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/ExtractIndicesConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/ExtractIndicesConfig.py[0m
+[ 15%] [32m[1mLinking CXX executable /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/pcl_ros/convert_pointcloud_to_image[0m
+[ 17%] [32m[1mLinking CXX executable /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/pcl_ros/pcd_to_pointcloud[0m
+[ 18%] [32m[1mLinking CXX shared library /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/libpcl_ros_tf.so[0m
+Generating reconfiguration files for ExtractIndices in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/ExtractIndicesConfig.h
+ done.
+[ 20%] [34m[1mGenerating dynamic reconfigure files from cfg/ExtractPolygonalPrismData.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/ExtractPolygonalPrismDataConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/ExtractPolygonalPrismDataConfig.py[0m
+Checking md5sum on /home/uhdt/ws2_livox/devel/.private/pcl_ros/share/pcl_ros/samples/data/table_scene_lms400.pcd
+Generating reconfiguration files for ExtractPolygonalPrismData in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/ExtractPolygonalPrismDataConfig.h
+[ 20%] Built target table_scene_lms400.pcd
+[ 21%] [34m[1mGenerating dynamic reconfigure files from cfg/Feature.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/FeatureConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/FeatureConfig.py[0m
+[35m[1mScanning dependencies of target download_extra_data[0m
+[ 21%] Built target download_extra_data
+[ 23%] [34m[1mGenerating dynamic reconfigure files from cfg/Filter.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/FilterConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/FilterConfig.py[0m
+Generating reconfiguration files for Feature in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/FeatureConfig.h
+[ 25%] [34m[1mGenerating dynamic reconfigure files from cfg/MLS.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/MLSConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/MLSConfig.py[0m
+Generating reconfiguration files for Filter in pcl_ros
+Generating reconfiguration files for MLS in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/FilterConfig.h
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/MLSConfig.h
+[ 26%] [34m[1mGenerating dynamic reconfigure files from cfg/SACSegmentation.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/SACSegmentationConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/SACSegmentationConfig.py[0m
+[ 28%] [34m[1mGenerating dynamic reconfigure files from cfg/SACSegmentationFromNormals.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/SACSegmentationFromNormalsConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/SACSegmentationFromNormalsConfig.py[0m
+Generating reconfiguration files for SACSegmentation in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/SACSegmentationConfig.h
+Generating reconfiguration files for SACSegmentationFromNormals in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/SACSegmentationFromNormalsConfig.h
+[ 29%] [34m[1mGenerating dynamic reconfigure files from cfg/SegmentDifferences.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/SegmentDifferencesConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/SegmentDifferencesConfig.py[0m
+[ 31%] [34m[1mGenerating dynamic reconfigure files from cfg/StatisticalOutlierRemoval.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/StatisticalOutlierRemovalConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/StatisticalOutlierRemovalConfig.py[0m
+Generating reconfiguration files for StatisticalOutlierRemoval in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/StatisticalOutlierRemovalConfig.h
+Generating reconfiguration files for SegmentDifferences in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/SegmentDifferencesConfig.h
+[ 32%] [34m[1mGenerating dynamic reconfigure files from cfg/RadiusOutlierRemoval.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/RadiusOutlierRemovalConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/RadiusOutlierRemovalConfig.py[0m
+[ 34%] [34m[1mGenerating dynamic reconfigure files from cfg/VoxelGrid.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/VoxelGridConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/VoxelGridConfig.py[0m
+[ 35%] [34m[1mGenerating dynamic reconfigure files from cfg/CropBox.cfg: /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/CropBoxConfig.h /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/python3/dist-packages/pcl_ros/cfg/CropBoxConfig.py[0m
+[ 35%] Built target convert_pointcloud_to_image
+[35m[1mScanning dependencies of target download[0m
+[ 35%] Built target download
+Generating reconfiguration files for RadiusOutlierRemoval in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/RadiusOutlierRemovalConfig.h
+Generating reconfiguration files for VoxelGrid in pcl_ros
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/VoxelGridConfig.h
+[ 35%] Built target pcl_ros_tf
+Generating reconfiguration files for CropBox in pcl_ros
+[35m[1mScanning dependencies of target pcl_ros_io[0m
+Wrote header file in /home/uhdt/ws2_livox/devel/.private/pcl_ros/include/pcl_ros/CropBoxConfig.h
+[35m[1mScanning dependencies of target bag_to_pcd[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/bag_to_pcd.dir/tools/bag_to_pcd.cpp.o[0m
+[ 37%] Built target pcl_ros_gencfg
+[ 39%] [32mBuilding CXX object CMakeFiles/pcl_ros_io.dir/src/pcl_ros/io/bag_io.cpp.o[0m
+[35m[1mScanning dependencies of target pcl_ros_surface[0m
+[35m[1mScanning dependencies of target pcl_ros_filter[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/pcl_ros_io.dir/src/pcl_ros/io/concatenate_data.cpp.o[0m
+[ 42%] [32m[1mLinking CXX executable /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/pcl_ros/bag_to_pcd[0m
+[ 42%] Built target pcd_to_pointcloud
+[ 43%] [32mBuilding CXX object CMakeFiles/pcl_ros_io.dir/src/pcl_ros/io/concatenate_fields.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/pcl_ros_surface.dir/src/pcl_ros/surface/surface.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/pcl_ros_filter.dir/src/pcl_ros/filters/filter.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/pcl_ros_surface.dir/src/pcl_ros/surface/convex_hull.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pcl_ros_io.dir/src/pcl_ros/io/io.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/pcl_ros_io.dir/src/pcl_ros/io/pcd_io.cpp.o[0m
+[ 53%] [32m[1mLinking CXX shared library /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/libpcl_ros_filter.so[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/pcl_ros_surface.dir/src/pcl_ros/surface/moving_least_squares.cpp.o[0m
+[35m[1mScanning dependencies of target pcl_ros_segmentation[0m
+[ 56%] [32m[1mLinking CXX shared library /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/libpcl_ros_io.so[0m
+[ 57%] [32m[1mLinking CXX shared library /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/libpcl_ros_surface.so[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/pcl_ros_segmentation.dir/src/pcl_ros/segmentation/extract_clusters.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/pcl_ros_segmentation.dir/src/pcl_ros/segmentation/extract_polygonal_prism_data.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/pcl_ros_segmentation.dir/src/pcl_ros/segmentation/sac_segmentation.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/pcl_ros_segmentation.dir/src/pcl_ros/segmentation/segment_differences.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/pcl_ros_segmentation.dir/src/pcl_ros/segmentation/segmentation.cpp.o[0m
+[ 67%] [32m[1mLinking CXX shared library /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/libpcl_ros_segmentation.so[0m
+[ 67%] Built target bag_to_pcd
+[35m[1mScanning dependencies of target pcl_ros_features[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/feature.cpp.o[0m
+[ 68%] Built target pcl_ros_filter
+[35m[1mScanning dependencies of target pcl_ros_filters[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/boundary.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/pcl_ros_filters.dir/src/pcl_ros/filters/extract_indices.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/fpfh.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/pcl_ros_filters.dir/src/pcl_ros/filters/passthrough.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/fpfh_omp.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/pcl_ros_filters.dir/src/pcl_ros/filters/project_inliers.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/shot.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/pcl_ros_filters.dir/src/pcl_ros/filters/radius_outlier_removal.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/shot_omp.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/pcl_ros_filters.dir/src/pcl_ros/filters/statistical_outlier_removal.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/moment_invariants.cpp.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/normal_3d.cpp.o[0m
+[ 89%] [32mBuilding CXX object CMakeFiles/pcl_ros_filters.dir/src/pcl_ros/filters/voxel_grid.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/normal_3d_omp.cpp.o[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/pcl_ros_filters.dir/src/pcl_ros/filters/crop_box.cpp.o[0m
+[ 93%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/pfh.cpp.o[0m
+[ 95%] [32m[1mLinking CXX shared library /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/libpcl_ros_filters.so[0m
+[ 96%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/principal_curvatures.cpp.o[0m
+[ 98%] [32mBuilding CXX object CMakeFiles/pcl_ros_features.dir/src/pcl_ros/features/vfh.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/uhdt/ws2_livox/devel/.private/pcl_ros/lib/libpcl_ros_features.so[0m
+[100%] Built target pcl_ros_io
+[100%] Built target pcl_ros_surface
+[100%] Built target pcl_ros_segmentation
+[100%] Built target pcl_ros_filters
+[100%] Built target pcl_ros_features

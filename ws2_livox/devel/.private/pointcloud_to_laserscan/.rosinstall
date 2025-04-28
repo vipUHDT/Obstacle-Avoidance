@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/uhdt/ws2_livox/devel/.private/pointcloud_to_laserscan/setup.sh

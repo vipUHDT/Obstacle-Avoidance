@@ -1,0 +1,58 @@
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target _livox_ros_driver2_generate_messages_check_deps_CustomPoint[0m
+[  0%] Built target _livox_ros_driver2_generate_messages_check_deps_CustomPoint
+[35m[1mScanning dependencies of target _livox_ros_driver2_generate_messages_check_deps_CustomMsg[0m
+[  0%] Built target _livox_ros_driver2_generate_messages_check_deps_CustomMsg
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[  0%] Built target std_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  0%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  0%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target livox_ros_driver2_generate_messages_cpp[0m
+[  3%] [34m[1mGenerating C++ code from livox_ros_driver2/CustomPoint.msg[0m
+[  7%] [34m[1mGenerating C++ code from livox_ros_driver2/CustomMsg.msg[0m
+[  7%] Built target livox_ros_driver2_generate_messages_cpp
+[35m[1mScanning dependencies of target livox_ros_driver2_generate_messages_nodejs[0m
+[ 10%] [34m[1mGenerating Javascript code from livox_ros_driver2/CustomPoint.msg[0m
+[ 14%] [34m[1mGenerating Javascript code from livox_ros_driver2/CustomMsg.msg[0m
+[ 14%] Built target livox_ros_driver2_generate_messages_nodejs
+[35m[1mScanning dependencies of target livox_ros_driver2_generate_messages_lisp[0m
+[ 17%] [34m[1mGenerating Lisp code from livox_ros_driver2/CustomPoint.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from livox_ros_driver2/CustomMsg.msg[0m
+[ 21%] Built target livox_ros_driver2_generate_messages_lisp
+[35m[1mScanning dependencies of target livox_ros_driver2_generate_messages_eus[0m
+[ 25%] [34m[1mGenerating EusLisp code from livox_ros_driver2/CustomPoint.msg[0m
+[ 28%] [34m[1mGenerating EusLisp code from livox_ros_driver2/CustomMsg.msg[0m
+[ 32%] [34m[1mGenerating EusLisp manifest code for livox_ros_driver2[0m
+WARNING: Package name "OA_pkg" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+WARNING: Package name "OA_pkg" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[ 32%] Built target livox_ros_driver2_generate_messages_eus
+[35m[1mScanning dependencies of target livox_ros_driver2_generate_messages_py[0m
+[ 35%] [34m[1mGenerating Python from MSG livox_ros_driver2/CustomPoint[0m
+[ 39%] [34m[1mGenerating Python from MSG livox_ros_driver2/CustomMsg[0m
+[ 42%] [34m[1mGenerating Python msg __init__.py for livox_ros_driver2[0m
+[ 42%] Built target livox_ros_driver2_generate_messages_py
+[35m[1mScanning dependencies of target livox_ros_driver2_node[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/driver_node.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/lds.cpp.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/lds_lidar.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/lddc.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/livox_ros_driver2.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/comm/comm.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/comm/ldq.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/comm/semaphore.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/comm/lidar_imu_data_queue.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/comm/cache_index.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/comm/pub_handler.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/parse_cfg_file/parse_cfg_file.cpp.o[0m
+[ 89%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/parse_cfg_file/parse_livox_lidar_cfg.cpp.o[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/call_back/lidar_common_callback.cpp.o[0m
+[ 96%] [32mBuilding CXX object CMakeFiles/livox_ros_driver2_node.dir/src/call_back/livox_lidar_callback.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/uhdt/ws2_livox/devel/.private/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node[0m
+[100%] Built target livox_ros_driver2_node
+[35m[1mScanning dependencies of target livox_ros_driver2_generate_messages[0m
+[100%] Built target livox_ros_driver2_generate_messages

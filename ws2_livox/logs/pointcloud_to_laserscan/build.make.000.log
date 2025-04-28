@@ -1,0 +1,8 @@
+[35m[1mScanning dependencies of target pointcloud_to_laserscan[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_nodelet.cpp.o[0m
+/home/uhdt/ws2_livox/src/pointcloud_to_laserscan-indigo-devel/src/pointcloud_to_laserscan_nodelet.cpp:241:24: error: expected constructor, destructor, or type conversion before ‘(’ token
+  241 | PLUGINLIB_DECLARE_CLASS(pointcloud_to_laserscan, PointCloudToLaserScanNodelet, pointcloud_to_laserscan::PointCloudToLaserScanNodelet, nodelet::Nodelet);
+      |                        ^
+make[2]: *** [CMakeFiles/pointcloud_to_laserscan.dir/build.make:63: CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_nodelet.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1677: CMakeFiles/pointcloud_to_laserscan.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

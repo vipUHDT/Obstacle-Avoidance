@@ -1,0 +1,5 @@
+Symlinking /home/uhdt/ws2_livox/devel/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake
+Symlinking /home/uhdt/ws2_livox/devel/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig-version.cmake
+Symlinking /home/uhdt/ws2_livox/devel/lib/libpointcloud_to_laserscan.so
+Symlinking /home/uhdt/ws2_livox/devel/lib/pkgconfig/pointcloud_to_laserscan.pc
+Symlinking /home/uhdt/ws2_livox/devel/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node

@@ -1,0 +1,5 @@
+Symlinking /home/uhdt/ws2_livox/devel/share/OA_pkg/cmake/OA_pkgConfig.cmake
+Symlinking /home/uhdt/ws2_livox/devel/share/OA_pkg/cmake/OA_pkgConfig-version.cmake
+Symlinking /home/uhdt/ws2_livox/devel/lib/OA_pkg/obstacle_distance_3d_node.py
+Symlinking /home/uhdt/ws2_livox/devel/lib/OA_pkg/cmake.lock
+Symlinking /home/uhdt/ws2_livox/devel/lib/pkgconfig/OA_pkg.pc

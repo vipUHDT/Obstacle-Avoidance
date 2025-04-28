@@ -1,0 +1,8 @@
+prefix=/home/uhdt/ws2_livox/devel
+exec_prefix=/home/uhdt/ws2_livox/devel
+includedir=${prefix}/include
+
+Name: mavlink
+Description: MAVLink micro air vehicle marshalling / communication library
+Version: 2024.10.10
+Cflags: -I${includedir}
