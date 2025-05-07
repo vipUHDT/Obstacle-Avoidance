@@ -1,1 +1,0 @@
-/home/uhdt/ws2_livox/devel/.private/livox_ros_driver2/include/livox_ros_driver2/CustomPoint.h

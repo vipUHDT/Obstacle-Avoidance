@@ -1,1 +1,0 @@
-/home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros/obstacle_avoidance.py

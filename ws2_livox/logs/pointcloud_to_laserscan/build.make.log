@@ -1,8 +1,0 @@
-[35m[1mScanning dependencies of target pointcloud_to_laserscan[0m
-[ 25%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_nodelet.cpp.o[0m
-[ 50%] [32m[1mLinking CXX shared library /home/uhdt/ws2_livox/devel/.private/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so[0m
-[ 50%] Built target pointcloud_to_laserscan
-[35m[1mScanning dependencies of target pointcloud_to_laserscan_node[0m
-[ 75%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan_node.dir/src/pointcloud_to_laserscan_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/uhdt/ws2_livox/devel/.private/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node[0m
-[100%] Built target pointcloud_to_laserscan_node

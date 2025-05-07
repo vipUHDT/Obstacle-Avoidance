@@ -1,6 +1,0 @@
-devel_space: /home/uhdt/ws2_livox/devel
-install: false
-install_space: /home/uhdt/ws2_livox/install
-profile: default
-source_space: /home/uhdt/ws2_livox/src
-workspace: /home/uhdt/ws2_livox

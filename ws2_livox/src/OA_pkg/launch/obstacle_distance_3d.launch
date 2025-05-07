@@ -1,3 +1,0 @@
-<launch>
-	<node pkg="OA_pkg" type="obstacle_distance_3d_node.py" name="obstacle_distance_3d" output="screen" />
-</launch>

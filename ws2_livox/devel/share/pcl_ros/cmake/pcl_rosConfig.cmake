@@ -1,1 +1,0 @@
-/home/uhdt/ws2_livox/devel/.private/pcl_ros/share/pcl_ros/cmake/pcl_rosConfig.cmake

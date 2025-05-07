@@ -1,1 +1,0 @@
-/home/uhdt/ws2_livox/devel/.private/livox_ros_driver2/share/roseus/ros/livox_ros_driver2/manifest.l

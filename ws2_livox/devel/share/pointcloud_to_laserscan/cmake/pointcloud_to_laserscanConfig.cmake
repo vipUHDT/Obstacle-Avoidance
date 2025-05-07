@@ -1,1 +1,0 @@
-/home/uhdt/ws2_livox/devel/.private/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake

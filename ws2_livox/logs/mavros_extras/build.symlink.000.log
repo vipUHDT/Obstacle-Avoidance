@@ -1,6 +1,0 @@
-Symlinking /home/uhdt/ws2_livox/devel/share/mavros_extras/cmake/mavros_extrasConfig.cmake
-Symlinking /home/uhdt/ws2_livox/devel/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake
-Symlinking /home/uhdt/ws2_livox/devel/lib/libmavros_extras.so
-Symlinking /home/uhdt/ws2_livox/devel/lib/pkgconfig/mavros_extras.pc
-Symlinking /home/uhdt/ws2_livox/devel/lib/mavros_extras/visualization
-Symlinking /home/uhdt/ws2_livox/devel/lib/mavros_extras/servo_state_publisher
