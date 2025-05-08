@@ -1,0 +1,4 @@
+[INFO] [3757.750151]: Latitude: 21.4003319, Longitude: -157.7640947, Altitude: 43.77 m
+
+
+Image 20

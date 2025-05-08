@@ -59,7 +59,7 @@ class WaypointMission:
         self.clean()
 
         # Servos
-        self.SK = ServoKit( channels= 16)
+        #self.SK = ServoKit( channels= 16)
 
         # Writing file variable
         self.attitude_time = []
@@ -84,8 +84,15 @@ class WaypointMission:
         # Lat, Lon, Alt
         # Waypoint lap
         self.waypoints = [
-            (21.4000122, -157.7646502, 26),
-            (21.4000671, -157.7644846, 26)
+            (21.40048790, -157.76366380, 26),
+            (21.40003340, -157.76471530, 26),
+            (21.40059030, -157.76495130, 26),
+            (21.40098240, -157.76398570, 26),
+            (21.40048790, -157.76366380, 26),
+            (21.40003340, -157.76471530, 26),
+            (21.40059030, -157.76495130, 26),
+            (21.40098240, -157.76398570, 26)
+
         ]
 
         # Lat, Lon, Alt
@@ -662,7 +669,8 @@ class WaypointMission:
 
         ]
         # Edit this later
-        with open('Data_log.txt', 'a') as file:
+        filename = "/home/uhdt/ws2_livox/mission_time_data/" + datetime.now().strftime("%Y_%m_%d_%H_%M_%S") + ".txt"
+        with open(filename, 'a') as file:
                 for data_name, data_values, data_average, data_sum in data_averages_and_time:
                         file.write(f"{data_name}: {data_values}\n")
                         file.write(f"{data_name} average: {data_average} seconds\n")
@@ -679,9 +687,11 @@ class WaypointMission:
 
         self.search_area_command()
 
-        self.deliver_payload_command()
+        #self.deliver_payload_command()
 
         self.end_mission()
+
+        self.export()
 
 
 

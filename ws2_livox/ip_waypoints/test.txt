@@ -1,0 +1,12 @@
+Latitude of payload 0: 21.4001876999989
+Longitude of payload 0: -157.76459
+Number of payloads to drop: 2
+Latitude of payload 1: 21.4003069000017
+Longitude of payload 1: -157.764296899967
+Number of payloads to drop: 1
+Latitude of payload 2: 21.400388
+Longitude of payload 2: -157.764450399864
+Number of payloads to drop: 1
+Latitude of payload 3: 21.4004965125
+Longitude of payload 3: -157.76412232500002
+Number of payloads to drop: 0

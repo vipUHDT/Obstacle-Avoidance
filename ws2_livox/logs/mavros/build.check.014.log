@@ -1,0 +1,65 @@
+make: Warning: File 'Makefile' has modification time 1746237694 s in the future
+CMake Warning (dev) at CMakeLists.txt:2 (project):
+  Policy CMP0048 is not set: project() command manages VERSION variables.
+  Run "cmake --help-policy CMP0048" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  The following variable(s) would be set to empty:
+
+    CMAKE_PROJECT_VERSION
+    CMAKE_PROJECT_VERSION_MAJOR
+    CMAKE_PROJECT_VERSION_MINOR
+    CMAKE_PROJECT_VERSION_PATCH
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/uhdt/ws2_livox/devel/.private/mavros
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/uhdt/ws2_livox/devel;/opt/ros/noetic
+[36m--[0m This workspace overlays: /home/uhdt/ws2_livox/devel;/opt/ros/noetic
+[36m--[0m Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
+[36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python3
+[36m--[0m Using Debian Python package layout
+[36m--[0m Using empy: /home/uhdt/.local/lib/python3.8/site-packages/em.py
+[36m--[0m Using CATKIN_ENABLE_TESTING: ON
+[36m--[0m Call enable_testing()
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/uhdt/ws2_livox/build/mavros/test_results
+[36m--[0m Forcing gtest/gmock from source, though one was otherwise available.
+[36m--[0m Found gtest sources under '/usr/src/googletest': gtests will be built
+[36m--[0m Found gmock sources under '/usr/src/googletest': gmock will be built
+[36m--[0m Found PythonInterp: /usr/bin/python3 (found version "3.8.10")
+[36m--[0m Using Python nosetests: /usr/bin/nosetests3
+[36m--[0m catkin 0.8.10
+[36m--[0m BUILD_SHARED_LIBS is on
+[36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[36m--[0m Geoid model datasets found in: /usr/share/GeographicLib/geoid
+[36m--[0m Gravity Field model datasets found in: /usr/share/GeographicLib/gravity
+[36m--[0m Magnetic Field model datasets found in: /usr/share/GeographicLib/magnetic
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/Config.py to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/Search_Area.py to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/auto_test3 to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/checkid to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/collect_gps.py to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/control_servo.py to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/eeprom.bin to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/event_launcher to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/install_geographiclib_datasets.sh to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/map.html to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mav.parm to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mav.tlog to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mav.tlog.raw to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mavcmd to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mavftp to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mavparam to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mavsafety to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mavsetp to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mavsys to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mavwp to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/mission.waypoints to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/obstacle_distance_3d_node_test5.py to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/roslaunch.sh to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/start_mission.sh to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/stop-sign.txt to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Installing devel-space wrapper /home/uhdt/ws2_livox/src/mavros/mavros/scripts/test.txt to /home/uhdt/ws2_livox/devel/.private/mavros/lib/mavros
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/uhdt/ws2_livox/build/mavros
+make: warning:  Clock skew detected.  Your build may be incomplete.
