@@ -1,0 +1,7 @@
+mavros/test_mavros
+/home/uhdt/ws2_livox/devel/.private/test_mavros/cmake.lock /home/uhdt/ws2_livox/devel/./cmake.lock
+/home/uhdt/ws2_livox/devel/.private/test_mavros/share/test_mavros/cmake/test_mavrosConfig.cmake /home/uhdt/ws2_livox/devel/share/test_mavros/cmake/test_mavrosConfig.cmake
+/home/uhdt/ws2_livox/devel/.private/test_mavros/share/test_mavros/cmake/test_mavrosConfig-version.cmake /home/uhdt/ws2_livox/devel/share/test_mavros/cmake/test_mavrosConfig-version.cmake
+/home/uhdt/ws2_livox/devel/.private/test_mavros/lib/libmavros_sitl_test.so /home/uhdt/ws2_livox/devel/lib/libmavros_sitl_test.so
+/home/uhdt/ws2_livox/devel/.private/test_mavros/lib/test_mavros/sitl_test_node /home/uhdt/ws2_livox/devel/lib/test_mavros/sitl_test_node
+/home/uhdt/ws2_livox/devel/.private/test_mavros/lib/pkgconfig/test_mavros.pc /home/uhdt/ws2_livox/devel/lib/pkgconfig/test_mavros.pc
