@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
@@ -34,30 +35,52 @@ livox_ros2_params = [
 
 
 def generate_launch_description():
+    # Livox driver
     livox_driver = Node(
         package='livox_ros_driver2',
         executable='livox_ros_driver2_node',
         name='livox_lidar_publisher',
         output='screen',
         parameters=livox_ros2_params
-        )
+    )
 
+    # *** NEW: pointcloud_to_laserscan node (ROS2 version of previous ROS1 block) ***
+    pcl_to_scan = Node(
+        package='pointcloud_to_laserscan',        # <- package name in your ROS2 ws
+        executable='pointcloud_to_laserscan_node',# <- installed executable
+        name='pointcloud_to_laserscan',
+        output='screen',
+        parameters=[{
+            'min_height': 0.1,
+            'max_height': 0.9,
+            'range_min': 0.5,
+            'range_max': 40.0,
+            'scan_time': 0.1,
+            'use_inf': True,
+        }],
+        remappings=[
+            ('cloud_in', '/livox/lidar'),
+            ('scan', '/scan'),
+        ],
+    )
+
+    # RViz2
     livox_rviz = Node(
-            package='rviz2',
-            executable='rviz2',
-            output='screen',
-            arguments=['--display-config', rviz_config_path]
-        )
+        package='rviz2',
+        executable='rviz2',
+        output='screen',
+        arguments=['--display-config', rviz_config_path]
+    )
 
     return LaunchDescription([
         livox_driver,
+        pcl_to_scan,   # <- make sure this is included
         livox_rviz,
+        # (you can re-enable the shutdown handler if you need it)
         # launch.actions.RegisterEventHandler(
         #     event_handler=launch.event_handlers.OnProcessExit(
         #         target_action=livox_rviz,
-        #         on_exit=[
-        #             launch.actions.EmitEvent(event=launch.events.Shutdown()),
-        #         ]
+        #         on_exit=[launch.actions.EmitEvent(event=launch.events.Shutdown())]
         #     )
         # )
     ])
