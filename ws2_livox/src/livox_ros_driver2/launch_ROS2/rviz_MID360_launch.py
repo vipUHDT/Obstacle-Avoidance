@@ -45,7 +45,7 @@ def generate_launch_description():
         parameters=livox_ros2_params,
     )
 
-    # pointcloud_to_laserscan node (ROS2 version of your ROS1 block)
+    # pointcloud_to_laserscan node (ROS2 version)
     pcl_to_scan = Node(
         package='pointcloud_to_laserscan',
         executable='pointcloud_to_laserscan_node',
